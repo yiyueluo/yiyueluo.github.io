@@ -1,31 +1,31 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Yiyue Luo</title>
-  </head>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
 
-  <body>
+  <title>Yiyue Luo</title>
+</head>
+
+<body>
   <!-- nav-bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid" style="width: 80%;">
-      <a class="navbar-brand" href="#">Yiyue Luo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="navbar-brand" href="./index.html">Yiyue Luo</a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./project-page.html">Publication</a>
+            <a class="nav-link" href="./project-page.html">Projects</a>
           </li>
         </ul>
       </div>
@@ -33,12 +33,52 @@
   </nav>
 
   <!-- body -->
-  <div class="container-fluid">
+  <div class="container-fluid" style="width: 80%;">
     <!-- Biography -->
-    <div class="row">
-      <div class="col-4">IMG</div>
-      <div class="col-8">Intros</div>
+    <div class="row" style="margin-top: 10px;">
+      <div class="col-4" style="text-align: center;">
+        <img src="./image/headShot.PNG" alt="Profile Picture" style="height: 240px;">
+        <div style="margin-top: 5px;">Email: yiyueluo@mit.edu</div>
+        <div>
+          <a href="https://scholar.google.com/citations?user=jpWnp-kAAAAJ&hl=en" target="_blank">Google Scholar</a>|
+          <a href="https://www.linkedin.com/in/yiyue-luo/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="col-8" style="margin-top: 10px;">
+        <h3>Yiyue Luo</h3>
+        <div>I am a 3rd year PhD student in the
+          <a href="https://cdfg.mit.edu/" target="_blank">Computational Design & Fabrication group (CDFG)</a>
+          at MIT Electrical Engineering and Computer Science (EECS), advised by
+          <a href="https://cdfg.csail.mit.edu/wojciech" target="_blank">Professor Wojciech Matusik</a>
+          and
+          <a href="http://www-mtl.mit.edu/wpmu/tpalacios/brief-bio-cv/" target="_blank">Professor Tomas Palacios</a>.
+          Before joining MIT, I received my B. S. in Materials Science and Engineering at University of Illinois
+          Urbana-Champaign. I worked as an undergraduate research assistant in
+          <a href="http://rogersgroup.northwestern.edu/" target="_blank">Professor John A. Roger's group</a>
+          from 2015 to 2017. My research interests are fabrication, smart textiles, and tactile sensing.
+        </div>
+      </div>
     </div>
+
+    <!-- Publication -->
+    <h4 style="margin-top: 20px;">Publications</h4>
+
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-4">
+        <img src="./image/CHI2021.JPG" alt="CHI2021" style="max-width: 100%; max-height: 200px;">
+      </div>
+      <div class="col-8">
+        <p>KnitUI: Fabricating Interactive and Sensing Textiles with Machine Knitting</p>
+        <div>Y. Luo*; K. Wu*; T. Palacios; W. Matusik. </div>
+        <div>ACM CHI (2021). [coming soon] </div>
+        <div>
+          <a href="">[Project Page]</a>
+          <a href="">[Paper]</a>
+        </div>
+      </div>
+    </div>
+
   </div>
-  </body>
+</body>
+
 </html>

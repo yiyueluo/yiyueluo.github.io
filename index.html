@@ -2,23 +2,52 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
-    integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./styles.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111713571-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-111713571-1');
+  </script>
 
+
+  <script type="text/javascript">
+      function toggle_vis(id) {
+      // var e = document.getElementById(id);
+      var e = document.getElementsByClassName(id);
+          var showText = document.getElementById("showText");
+          for (var i = 0; i < e.length; i++) {
+              if (e[i].style.display == "none") {
+                  e[i].style.display = "inline";
+                  showText.innerHTML = "[Show less]";
+              } else {
+                  e[i].style.display = "none";
+                  showText.innerHTML = "[Show more]";
+              }
+          }
+      }
+  </script>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<!-- https://fontawesome.com/cheatsheet -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+	<!-- Custom styles for this template -->
+	<link href="files/jumbotron.css" rel="stylesheet">
+	<script src="js/main.js"></script>
+  <script src="js/scroll.js"></script>
   <title>Yiyue Luo</title>
+
 </head>
+
+
 
 <body>
   <!-- nav-bar -->
@@ -35,7 +64,7 @@
             <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./index.html#pub">Publications</a>
+            <a class="nav-link active" aria-current="page" href="./index.html#pubs">Publications</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="./index.html#exp">Experience</a>
@@ -75,225 +104,523 @@
         </div>
       </div>
     </div>
+  </div>
+
+
+<!--     News -->
+  <div class="container-fluid" style="width: 80%;">
+    <h4 style="margin-top: 30px;" id="news">News</h4>
+    <ul>
+      <li>[5/2023] I've been awarded 2023-2024 Accenture Fellowship. </li>
+      <li>[4/2023] I've been awarded 2023 Meta Fellowship Finallist. </li>
+      <li>[9/2022] I've been awarded 2022-2023 Schwarzman College of Computing Fellowship by Google. </li>
+      <li>[9/2021] I've been awarded 2021-2022 MathWorks Fellowship. </li>
+      <li>[9/2021] <a href="http://knitui.csail.mit.edu/">KnitUI</a> has been awarded CHI 2021 Best Paper Honorable Mention.</li>
+
+    </ul>
+  </div>
+
+
+
 
 <!--     Publication -->
-    <h4 style="margin-top: 30px;" id="pub">Selected Publications</h4>
+  <div class="container-fluid" style="width: 80%;">
 
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-md-4">
-        <img src="./image/NeurIPS22.png" alt="NeurIPS22" style="max-width: 100%; max-height: 250px;">
-      </div>
-      <div class="col-md-8">
-        <p><strong>ActionNet: A Multimodal Dataset for Human Activities Using Wearable Sensors in a Kitchen Environment </strong></p>
-        <div>
-          J. DelPreto*; C. Liu*; <strong>Y. Luo</strong>; M. Foshey; Y. Li; A. Torralba; W. Matusik; D. Rus
-        <div>
-          <i>NeurIPS</i> (2022).
-          <a href="https://action-net.csail.mit.edu/">[Project Page]</a>
-          <a href="https://openreview.net/pdf?id=olvz0gAdGOX">[Paper]</a></p>
-<!--          <p style="font-size:15px">-->
-<!--             Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>-->
-<!--            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>-->
-<!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
-<!--          </p>-->
-        </div>
-      </div>
-    </div>
+		<h4 style="margin-top: 30px;">
+          Publications
+          <small><small>
+            (<a id="select0" onclick="showPubs(0);">show selected</a> /
+             <a id="select1" onclick="showPubs(1);">show by date</a>)
+<!--          <a href id="select2" onclick="showPubs(2);" style>show by topic</a>)-->
+          </small></small>
+        </h4>
+<!--        <br>-->
 
+<!--        <small>-->
+<!--          Research topics:-->
+<!--          <a href="t0" onclick="showPubs(2)" style>p</a> /-->
+<!--          <a href="t1" onclick="showPubs(2)" style>e</a>/-->
+<!--          <a href="t2" onclick="showPubs(2)" style>w</a>-->
+<!--        </small>-->
 
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-md-4">
-        <img src="./image/NC2022.png" alt="NC2022" style="max-width: 100%; max-height: 250px;">
-      </div>
-      <div class="col-md-8">
-        <p><strong>Integrated biosensor platform based on graphene transistor arrays for real-time high-accuracy ion sensing</strong></p>
-        <div>
-          M.Xue; C. Mackin; W. Weng; J. Zhu; <strong>Y. Luo</strong>; S. Luo; A. Lu; M. Hempel; E. McVay; J. Kong; T. Palacios
-        <div>
-          <i>Nature Communications</i>, 13, 5064 (2022).
-<!--          <a href="http://pneuact.csail.mit.edu/">[Project Page]</a>-->
-          <a href="https://www.nature.com/articles/s41467-022-32749-4">[Paper]</a></p>
-<!--          <p style="font-size:15px">-->
-<!--             Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>-->
-<!--            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>-->
-<!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
-<!--          </p>-->
-        </div>
-      </div>
-    </div>
+        <div id="pubs"></div>
 
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-md-4">
-        <img src="./image/CHI2022_2.JPG" alt="CHI2022" style="max-width: 100%; max-height: 250px;">
-      </div>
-      <div class="col-md-8">
-        <p><strong>Digital Fabrication of Pneumatic Actuators with Integrated Sensing by Machine Knitting</strong></p>
-        <div>
-          <strong>Y. Luo</strong>; K. Wu; A. Spielberg; M. Foshey;  T. Palacios; D. Rus; W. Matusik
-        <div>
-          <p><i>ACM CHI</i> (2022).
-          <a href="http://pneuact.csail.mit.edu/">[Project Page]</a>
-          <a href="http://pneuact.csail.mit.edu/file/CHI2022.pdf">[Paper]</a></p>
-          <p style="font-size:15px">
-             Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>
-            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>
-            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.
-          </p>
-        </div>
-      </div>
-    </div>
+		<script id="pubs_selected" language="text">
 
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-md-4">
-        <img src="./image/ICRA2022.JPG" alt="ICRA2022" style="max-width: 100%; max-height: 250px;">
-      </div>
-      <div class="col-md-8">
-        <p><strong>An Integrated Design Pipeline for Tactile Sensing Robotic Manipulators</strong></p>
-        <div>
-          L. Zlokapa; <strong>Y. Luo</strong>; J. Xu; M. Foshey; K. Wu; P. Agrawal; W. Matusik
-        <div>
-          <p><i>ICRA</i> (2022).
-          <a href="http://robohands.csail.mit.edu/">[Project Page]</a>
-          <a href="https://arxiv.org/pdf/2204.07149.pdf">[Paper]</a></p>
-          <p style="font-size:15px">
-             Covered by <a href="https://news.mit.edu/2022/hand-robotic-manipulator-design-0525" target="_blank">[MIT news]</a>.
-<!--            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>-->
-<!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-md-4">
-        <img src="./image/IROS2021.JPG" alt="IROS2021" style="max-width: 100%; max-height: 250px;">
-      </div>
-      <div class="col-md-8">
-        <p><strong>Dynamic Modeling of Hand-Object Interactions via Tactile Sensing</strong></p>
-        <div>
-          Q. Zhang*; Y. Li*; <strong>Y. Luo</strong>; W. Shou; M. Foshey; J. Yan; J. B. Tenenbaum; W. Matusik; A. Torralba
-        <div>
-          <i>IROS</i> (2021).
-          <a href="http://phystouch.csail.mit.edu/">[Project Page]</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-md-4">
-        <img src="./image/SIGGRAPH2021.jpg" alt="SIGGRAPH2021" style="max-width: 100%; max-height: 250px;">
-      </div>
-      <div class="col-md-8">
-        <p><strong>Knit Sketching: from Cut & Sew Patterns to Machine-Knit Garments</strong></p>
-        <div>
-          A. Kaspar; K. Wu; <strong>Y. Luo</strong>; L. Makatura; W. Matusik.
-        </div>
-        <div>
-          <i>SIGGRAPH</i> (2021).
-          <a href="http://knitsketching.csail.mit.edu/">[Project Page]</a>
-        </div>
-      </div>
-    </div>
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/NeurIPS22.png" alt="NeurIPS22" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>ActionSense: A Multimodal Dataset and Recording Framework for Human Activities Using Wearable Sensors in a Kitchen Environment </strong></p>
+              <div>
+                J. DelPreto*; C. Liu*; <strong>Y. Luo</strong>; M. Foshey; Y. Li; A. Torralba; W. Matusik; D. Rus
+              </div>
+              <div>
+                <i>NeurIPS</i> (2022).
+                <a href="https://action-sense.csail.mit.edu/">[Project Page]</a>
+                <a href="https://openreview.net/pdf?id=olvz0gAdGOX">[Paper]</a></p>
+      <!--          <p style="font-size:15px">-->
+      <!--             Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>-->
+      <!--            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>-->
+      <!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
+      <!--          </p>-->
+              </div>
+            </div>
+          </div>
 
 
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-md-4">
-        <img src="./image/CVPR2021.PNG" alt="CVPR2021" style="max-width: 100%; max-height: 250px;">
-      </div>
-      <div class="col-md-8">
-        <p><strong>Intelligent Carpet: Inferring 3D Human Pose from Tactile Signals</strong></p>
-          <p><strong>Y. Luo</strong>; Y. Li; M. Foshey; W. Shou; P. Sharma; T. Palacios; A. Torralba; W. Matusik.  <br>
-          <i>CVPR</i> (2021).
-          <a href="http://intcarpet.csail.mit.edu/">[Project Page]</a>
-          <a href="./pdf/CVPR2021.pdf" target="_blank">[Paper]</a>
-          <a href="https://github.com/yiyueluo/IntelligentCarpet" target="_blank">[Code]</a></p>
-          <p style="font-size:15px">
-             Covered by <a href="https://news.mit.edu/2021/intelligent-carpet-gives-insight-human-poses-0624" target="_blank">[MIT news]</a>
-            <a href="https://www.fastcompany.com/90648670/this-magic-carpet-can-track-your-workout" target="_blank">[Fast Company]</a>
-            <a href="https://www.zdnet.com/article/mit-makes-an-ai-smart-carpet-for-monitoring-people-without-cameras/" target="_blank">[ZDNet]</a>.
-          </p>
-      </div>
-    </div>
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/CHI2022_2.JPG" alt="CHI2022" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Digital Fabrication of Pneumatic Actuators with Integrated Sensing by Machine Knitting</strong></p>
+              <div>
+                <strong>Y. Luo</strong>; K. Wu; A. Spielberg; M. Foshey;  T. Palacios; D. Rus; W. Matusik
+              </div>
+              <div>
+                <p><i>ACM CHI</i> (2022).
+                <a href="http://pneuact.csail.mit.edu/">[Project Page]</a>
+                <a href="http://pneuact.csail.mit.edu/file/CHI2022.pdf">[Paper]</a></p>
+                <p style="font-size:15px">
+                   Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>
+                  <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>
+                  <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.
+                </p>
+              </div>
+            </div>
+          </div>
 
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-md-4", style="text-align: center">
-        <img src="./image/NE2021_3.png" alt="NE2021" style="max-width: 100%; max-height: 250px;">
-      </div>
-      <div class="col-md-8">
-        <p><strong>Learning human-environment interactions using conformal tactile textiles</strong></p>
-        <div>
-          <p><strong>Y. Luo</strong>; Y. Li; P. Sharma; W. Shou; K. Wu; M. Foshey; B. Li; T. Palacios; A. Torralba; W. Matusik.  <br>
-          <i>Nature Electronics</i>, 4, 193–201(2021)
-<!--        <a href="./file/NE2021.pdf" target="_blank">[Paper (PDF)]</a>-->
-          <a href="http://senstextile.csail.mit.edu/" target="_blank">[Project page]</a>
-          <a href="https://www.nature.com/articles/s41928-021-00558-0" target="_blank">[Paper (External link)]</a>
-          <a href="https://www.dropbox.com/sh/g70n60jfutzd0l5/AACnOgtLUG8tHbU8TLn5MBFba?dl=0" target="_blank">[Dataset]</a>
-          <a href="https://github.com/YunzhuLi/senstextile" target="_blank">[Code]</a> </p>
-          <p style="font-size:15px">
-            Selected as <a href="https://www.nature.com/natelectron/volumes/4/issues/3" target="_blank">cover</a>. Commentary
-            in <i>Nature Electronics</i> <a href="https://www.nature.com/articles/s41928-021-00560-6" target="_blank">(link)</a>.
-            Covered by <a href="https://www.csail.mit.edu/news/smart-clothes-can-measure-your-movements" target="_blank">[MIT news]</a>
-            <a href="https://www.engadget.com/mit-csail-smart-clothes-track-movements-160010512.html" target="_blank">[Engadget]</a>.
-          </p>
-        </div>
-      </div>
-    </div>
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/ICRA2022.JPG" alt="ICRA2022" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>An Integrated Design Pipeline for Tactile Sensing Robotic Manipulators</strong></p>
+              <div>
+                L. Zlokapa; <strong>Y. Luo</strong>; J. Xu; M. Foshey; K. Wu; P. Agrawal; W. Matusik
+              </div>
+              <div>
+                <p><i>ICRA</i> (2022).
+                <a href="http://robohands.csail.mit.edu/">[Project Page]</a>
+                <a href="https://arxiv.org/pdf/2204.07149.pdf">[Paper]</a></p>
+                <p style="font-size:15px">
+                   Covered by <a href="https://news.mit.edu/2022/hand-robotic-manipulator-design-0525" target="_blank">[MIT news]</a>.
+      <!--            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>-->
+      <!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
+                </p>
+              </div>
+            </div>
+          </div>
 
 
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-md-4">
-        <img src="./image/CHI2021.JPG" alt="CHI2021" style="max-width: 100%; max-height: 250px;">
-      </div>
-      <div class="col-md-8">
-        <p><strong>KnitUI: Fabricating Interactive and Sensing Textiles with Machine Knitting</strong></p>
-        <div>
-          <p><strong>Y. Luo</strong>*; K. Wu*; T. Palacios; W. Matusik.  <br>
-          <i>ACM CHI</i> (2021).
-          <a href="http://knitui.csail.mit.edu">[Project page]</a>
-            <a href="./pdf/CHI2021.pdf" target="_blank">[Paper]</a></p>
-          <p style="font-size:15px">Best Paper Honorable Mention Award </p>
-        </div>
 
-      </div>
-    </div>
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/IROS2021.JPG" alt="IROS2021" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Dynamic Modeling of Hand-Object Interactions via Tactile Sensing</strong></p>
+              <div>
+                Q. Zhang*; Y. Li*; <strong>Y. Luo</strong>; W. Shou; M. Foshey; J. Yan; J. B. Tenenbaum; W. Matusik; A. Torralba
+              </div>
+              <div>
+                <i>IROS</i> (2021).
+                <a href="http://phystouch.csail.mit.edu/">[Project Page]</a>
+              </div>
+            </div>
+          </div>
 
-<!--    <div class="row" style="margin-top: 30px;">-->
-<!--      <div class="col-md-4">-->
-<!--        <img src="./image/EM2017.PNG" alt="EM2017" style="max-width: 100%; max-height: 250px;">-->
-<!--      </div>-->
-<!--      <div class="col-md-8">-->
-<!--        <p><strong>Deterministic Assembly of 3D Mesostructures in Advanced Materials via Compressive Buckling: A short Review of-->
-<!--          Recent Progress</strong></p>-->
-<!--        <div>-->
-<!--          Z. Yan; M. Han; Y. Yang; K. Nan; H. Luan; <strong>Y. Luo</strong>; Y. Zhang; Y. Huang; J. A. Rogers.-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <i>Extreme Mechanics Letters</i> 11 (2017).-->
-<!--          <a href="https://www.sciencedirect.com/science/article/pii/S2352431616302218" target="_blank">[Paper]</a>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
 
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-md-4" style="text-align: center">
-        <img src="./image/PNAS2017.PNG" alt="PNAS2017" style="max-width: 100%; max-height: 250px;">
-      </div>
-      <div class="col-md-8">
-        <p><strong>Three-dimensional Mesostructures as High-temperature Growth Templates, Electronic Cellular Scaffolds, and
-          Self-propelled Microrobots</strong></p>
-        <div>
-          Z. Yan; M. Han; Y. Shi; A. Badea; Y. Yang; A. Kulkarni; E. Hanson; M. E. Kandel; X. Wen; F. Zhang; <strong>Y.
-            Luo</strong>; Q. Lin; et.al.
-        </div>
-        <div>
-          <i>Proceedings of the National Academy of Sciences</i> 114.45 (2017).
-          <a href="https://www.pnas.org/content/114/45/E9455" target="_blank">[Paper]</a>
-        </div>
-      </div>
-    </div>
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/CVPR2021.PNG" alt="CVPR2021" style="max-width: 100%; max-height: 500;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Intelligent Carpet: Inferring 3D Human Pose from Tactile Signals</strong></p>
+                <p><strong>Y. Luo</strong>; Y. Li; M. Foshey; W. Shou; P. Sharma; T. Palacios; A. Torralba; W. Matusik.  <br>
+                <i>CVPR</i> (2021).
+                <a href="http://intcarpet.csail.mit.edu/">[Project Page]</a>
+                <a href="./pdf/CVPR2021.pdf" target="_blank">[Paper]</a>
+                <a href="https://github.com/yiyueluo/IntelligentCarpet" target="_blank">[Code]</a></p>
+                <p style="font-size:15px">
+                   Covered by <a href="https://news.mit.edu/2021/intelligent-carpet-gives-insight-human-poses-0624" target="_blank">[MIT news]</a>
+                  <a href="https://www.fastcompany.com/90648670/this-magic-carpet-can-track-your-workout" target="_blank">[Fast Company]</a>
+                  <a href="https://www.zdnet.com/article/mit-makes-an-ai-smart-carpet-for-monitoring-people-without-cameras/" target="_blank">[ZDNet]</a>.
+                </p>
+            </div>
+          </div>
+
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4", style="text-align: center">
+              <img src="./image/NE2021_3.png" alt="NE2021" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Learning human-environment interactions using conformal tactile textiles</strong></p>
+              <div>
+                <p><strong>Y. Luo</strong>; Y. Li; P. Sharma; W. Shou; K. Wu; M. Foshey; B. Li; T. Palacios; A. Torralba; W. Matusik.  <br>
+                <i>Nature Electronics</i>, 4, 193–201(2021)
+      <!--        <a href="./file/NE2021.pdf" target="_blank">[Paper (PDF)]</a>-->
+                <a href="http://senstextile.csail.mit.edu/" target="_blank">[Project page]</a>
+                <a href="https://www.nature.com/articles/s41928-021-00558-0" target="_blank">[Paper (External link)]</a>
+                <a href="https://www.dropbox.com/sh/g70n60jfutzd0l5/AACnOgtLUG8tHbU8TLn5MBFba?dl=0" target="_blank">[Dataset]</a>
+                <a href="https://github.com/YunzhuLi/senstextile" target="_blank">[Code]</a> </p>
+                <p style="font-size:15px">
+                  Selected as <a href="https://www.nature.com/natelectron/volumes/4/issues/3" target="_blank">cover</a>. Commentary
+                  in <i>Nature Electronics</i> <a href="https://www.nature.com/articles/s41928-021-00560-6" target="_blank">(link)</a>.
+                  Covered by <a href="https://www.csail.mit.edu/news/smart-clothes-can-measure-your-movements" target="_blank">[MIT news]</a>
+                  <a href="https://www.engadget.com/mit-csail-smart-clothes-track-movements-160010512.html" target="_blank">[Engadget]</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/CHI2021.JPG" alt="CHI2021" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>KnitUI: Fabricating Interactive and Sensing Textiles with Machine Knitting</strong></p>
+              <div>
+                <p><strong>Y. Luo</strong>*; K. Wu*; T. Palacios; W. Matusik.  <br>
+                <i>ACM CHI</i> (2021).
+                <a href="http://knitui.csail.mit.edu">[Project page]</a>
+                  <a href="./pdf/CHI2021.pdf" target="_blank">[Paper]</a></p>
+                <p style="font-size:15px">Best Paper Honorable Mention Award </p>
+              </div>
+            </div>
+          </div>
+
+		</script>
+
+
+		<script id="pubs_by_date" language="text">
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/ICRA2023.jpg" alt="ICRA2023" style="max-width: 100%; max-height: 200;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Enable Natural Tactile Interaction for Robot Dog based on Large-format Distributed Flexible Pressure Sensors </strong></p>
+              <div>
+                L. Zhan; Y. Cao; Q. Chen; H. Guo; J. Gao; <strong>Y. Luo</strong>; S. Guo; G. Zhou; J. Gong
+              </div>
+              <div>
+                <i>ICRA </i> (2023).
+      <!--          <a href="https://action-sense.csail.mit.edu/">[Project Page]</a>-->
+                <a href="https://arxiv.org/abs/2303.07595">[Paper]</a>
+<!--                <a href="./pdf/CHI2023.pdf">[Poster]</a></p>-->
+      <!--          <p style="font-size:15px">-->
+      <!--             Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>-->
+      <!--            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>-->
+      <!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
+      <!--          </p>-->
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/CHI2023.jpg" alt="CHI2023" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Project Mihr: Enabling Gestural Interactions on a Keyboard using a Graphene-based Fabric </strong></p>
+              <div>
+                <strong>Y. Luo</strong>; E. Barhudarian; T. Seyed
+              </div>
+              <div>
+                <i>CHI Late-Breaking Work </i> (2023).
+      <!--          <a href="https://action-sense.csail.mit.edu/">[Project Page]</a>-->
+                <a href="https://dl.acm.org/doi/abs/10.1145/3544549.3585873">[Paper]</a>
+                <a href="./pdf/CHI2023_poster.pdf">[Poster]</a></p>
+      <!--          <p style="font-size:15px">-->
+      <!--             Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>-->
+      <!--            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>-->
+      <!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
+      <!--          </p>-->
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/NeurIPS22.png" alt="NeurIPS22" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>ActionSense: A Multimodal Dataset and Recording Framework for Human Activities Using Wearable Sensors in a Kitchen Environment </strong></p>
+              <div>
+                J. DelPreto*; C. Liu*; <strong>Y. Luo</strong>; M. Foshey; Y. Li; A. Torralba; W. Matusik; D. Rus
+              </div>
+              <div>
+                <i>NeurIPS</i> (2022).
+                <a href="https://action-sense.csail.mit.edu/">[Project Page]</a>
+                <a href="https://openreview.net/pdf?id=olvz0gAdGOX">[Paper]</a></p>
+      <!--          <p style="font-size:15px">-->
+      <!--             Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>-->
+      <!--            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>-->
+      <!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
+      <!--          </p>-->
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/VR2023.jpg" alt="NC2022" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Seamless-walk: natural and comfortable virtual reality locomotion method with a high-resolution tactile sensor</strong></p>
+              <div>
+                Y. Choi; D. Park; S. Lee; I. Han; E. Akan; H. Jeon; <strong>Y. Luo</strong>; S. Kim; W. Matusik; D. Rus; K. Kim
+              </div>
+              <div>
+                <i>Virtual Reality</i>, 1-15 (2023).
+      <!--          <a href="http://pneuact.csail.mit.edu/">[Project Page]</a>-->
+                <a href="https://link.springer.com/article/10.1007/s10055-023-00750-x">[Paper]</a></p>
+                <p style="font-size:15px">
+                   Covered by <a href="https://techxplore.com/news/2023-04-natural-comfortable-seamless-walk-virtual-reality.html" target="_blank">[TechXplore]</a>
+                  <a href="https://mixed-news.com/en/seamless-walk-vr-locomotion-system/" target="_blank">[MIXED Reality News]</a>
+      <!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/NC2022.png" alt="NC2022" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Integrated biosensor platform based on graphene transistor arrays for real-time high-accuracy ion sensing</strong></p>
+              <div>
+                M.Xue; C. Mackin; W. Weng; J. Zhu; <strong>Y. Luo</strong>; S. Luo; A. Lu; M. Hempel; E. McVay; J. Kong; T. Palacios
+              </div>
+              <div>
+                <i>Nature Communications</i>, 13, 5064 (2022).
+      <!--          <a href="http://pneuact.csail.mit.edu/">[Project Page]</a>-->
+                <a href="https://www.nature.com/articles/s41467-022-32749-4">[Paper]</a></p>
+      <!--          <p style="font-size:15px">-->
+      <!--             Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>-->
+      <!--            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>-->
+      <!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
+      <!--          </p>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/CHI2022_2.JPG" alt="CHI2022" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Digital Fabrication of Pneumatic Actuators with Integrated Sensing by Machine Knitting</strong></p>
+              <div>
+                <strong>Y. Luo</strong>; K. Wu; A. Spielberg; M. Foshey;  T. Palacios; D. Rus; W. Matusik
+              </div>
+              <div>
+                <p><i>ACM CHI</i> (2022).
+                <a href="http://pneuact.csail.mit.edu/">[Project Page]</a>
+                <a href="http://pneuact.csail.mit.edu/file/CHI2022.pdf">[Paper]</a></p>
+                <p style="font-size:15px">
+                   Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>
+                  <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>
+                  <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/ICRA2022.JPG" alt="ICRA2022" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>An Integrated Design Pipeline for Tactile Sensing Robotic Manipulators</strong></p>
+              <div>
+                L. Zlokapa; <strong>Y. Luo</strong>; J. Xu; M. Foshey; K. Wu; P. Agrawal; W. Matusik
+              </div>
+              <div>
+                <p><i>ICRA</i> (2022).
+                <a href="http://robohands.csail.mit.edu/">[Project Page]</a>
+                <a href="https://arxiv.org/pdf/2204.07149.pdf">[Paper]</a></p>
+                <p style="font-size:15px">
+                   Covered by <a href="https://news.mit.edu/2022/hand-robotic-manipulator-design-0525" target="_blank">[MIT news]</a>.
+      <!--            <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>-->
+      <!--            <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.-->
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/IROS2021.JPG" alt="IROS2021" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Dynamic Modeling of Hand-Object Interactions via Tactile Sensing</strong></p>
+              <div>
+                Q. Zhang*; Y. Li*; <strong>Y. Luo</strong>; W. Shou; M. Foshey; J. Yan; J. B. Tenenbaum; W. Matusik; A. Torralba
+              </div>
+              <div>
+                <i>IROS</i> (2021).
+                <a href="http://phystouch.csail.mit.edu/">[Project Page]</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/SIGGRAPH2021.jpg" alt="SIGGRAPH2021" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Knit Sketching: from Cut & Sew Patterns to Machine-Knit Garments</strong></p>
+              <div>
+                A. Kaspar; K. Wu; <strong>Y. Luo</strong>; L. Makatura; W. Matusik.
+              </div>
+              <div>
+                <i>SIGGRAPH</i> (2021).
+                <a href="http://knitsketching.csail.mit.edu/">[Project Page]</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/CVPR2021.PNG" alt="CVPR2021" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Intelligent Carpet: Inferring 3D Human Pose from Tactile Signals</strong></p>
+                <p><strong>Y. Luo</strong>; Y. Li; M. Foshey; W. Shou; P. Sharma; T. Palacios; A. Torralba; W. Matusik.  <br>
+                <i>CVPR</i> (2021).
+                <a href="http://intcarpet.csail.mit.edu/">[Project Page]</a>
+                <a href="./pdf/CVPR2021.pdf" target="_blank">[Paper]</a>
+                <a href="https://github.com/yiyueluo/IntelligentCarpet" target="_blank">[Code]</a></p>
+                <p style="font-size:15px">
+                   Covered by <a href="https://news.mit.edu/2021/intelligent-carpet-gives-insight-human-poses-0624" target="_blank">[MIT news]</a>
+                  <a href="https://www.fastcompany.com/90648670/this-magic-carpet-can-track-your-workout" target="_blank">[Fast Company]</a>
+                  <a href="https://www.zdnet.com/article/mit-makes-an-ai-smart-carpet-for-monitoring-people-without-cameras/" target="_blank">[ZDNet]</a>.
+                </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4", style="text-align: center">
+              <img src="./image/NE2021_3.png" alt="NE2021" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Learning human-environment interactions using conformal tactile textiles</strong></p>
+              <div>
+                <p><strong>Y. Luo</strong>; Y. Li; P. Sharma; W. Shou; K. Wu; M. Foshey; B. Li; T. Palacios; A. Torralba; W. Matusik.  <br>
+                <i>Nature Electronics</i>, 4, 193–201(2021)
+      <!--        <a href="./file/NE2021.pdf" target="_blank">[Paper (PDF)]</a>-->
+                <a href="http://senstextile.csail.mit.edu/" target="_blank">[Project page]</a>
+                <a href="https://www.nature.com/articles/s41928-021-00558-0" target="_blank">[Paper (External link)]</a>
+                <a href="https://www.dropbox.com/sh/g70n60jfutzd0l5/AACnOgtLUG8tHbU8TLn5MBFba?dl=0" target="_blank">[Dataset]</a>
+                <a href="https://github.com/YunzhuLi/senstextile" target="_blank">[Code]</a> </p>
+                <p style="font-size:15px">
+                  Selected as <a href="https://www.nature.com/natelectron/volumes/4/issues/3" target="_blank">cover</a>. Commentary
+                  in <i>Nature Electronics</i> <a href="https://www.nature.com/articles/s41928-021-00560-6" target="_blank">(link)</a>.
+                  Covered by <a href="https://www.csail.mit.edu/news/smart-clothes-can-measure-your-movements" target="_blank">[MIT news]</a>
+                  <a href="https://www.engadget.com/mit-csail-smart-clothes-track-movements-160010512.html" target="_blank">[Engadget]</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/CHI2021.JPG" alt="CHI2021" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>KnitUI: Fabricating Interactive and Sensing Textiles with Machine Knitting</strong></p>
+              <div>
+                <p><strong>Y. Luo</strong>*; K. Wu*; T. Palacios; W. Matusik.  <br>
+                <i>ACM CHI</i> (2021).
+                <a href="http://knitui.csail.mit.edu">[Project page]</a>
+                  <a href="./pdf/CHI2021.pdf" target="_blank">[Paper]</a></p>
+                <p style="font-size:15px">Best Paper Honorable Mention Award </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4">
+              <img src="./image/EM2017.PNG" alt="EM2017" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Deterministic Assembly of 3D Mesostructures in Advanced Materials via Compressive Buckling: A short Review of
+                Recent Progress</strong></p>
+              <div>
+                Z. Yan; M. Han; Y. Yang; K. Nan; H. Luan; <strong>Y. Luo</strong>; Y. Zhang; Y. Huang; J. A. Rogers.
+              </div>
+              <div>
+                <i>Extreme Mechanics Letters</i> 11 (2017).
+                <a href="https://www.sciencedirect.com/science/article/pii/S2352431616302218" target="_blank">[Paper]</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4" style="text-align: center">
+              <img src="./image/PNAS2017.PNG" alt="PNAS2017" style="max-width: 100%; max-height: 250px;">
+            </div>
+            <div class="col-md-8">
+              <p><strong>Three-dimensional Mesostructures as High-temperature Growth Templates, Electronic Cellular Scaffolds, and
+                Self-propelled Microrobots</strong></p>
+              <div>
+                Z. Yan; M. Han; Y. Shi; A. Badea; Y. Yang; A. Kulkarni; E. Hanson; M. E. Kandel; X. Wen; F. Zhang; <strong>Y.
+                  Luo</strong>; Q. Lin; et.al.
+              </div>
+              <div>
+                <i>Proceedings of the National Academy of Sciences</i> 114.45 (2017).
+                <a href="https://www.pnas.org/content/114/45/E9455" target="_blank">[Paper]</a>
+              </div>
+            </div>
+          </div>
+
+		</script>
+
+
+<!--		<script id="pubs_by_topic" language="text">-->
+
+<!--		</script>-->
+
+	</div>
+
+
+
+
 
     <!-- Experience -->
+  <div class="container-fluid" style="width: 80%;">
     <h4 style="margin-top: 30px;" id="exp">Experience</h4>
+
+    <div class="row" style="margin-top: 10px;">
+      <div class="col-8">
+        <div>Microsoft Research
+        </div>
+        <div><i>Research Intern | Mentor: Dr. Teddy Seyed </i> </div>
+      </div>
+      <div class="col-4" style="text-align: right;">
+        <div>May 2022 - Aug 2022 </div>
+        <div>Redmond, Washington </div>
+      </div>
+    </div>
+
+
     <div class="row" style="margin-top: 10px;">
       <div class="col-8">
         <div>Massachusetts Institute of Technology </div>
@@ -354,6 +681,14 @@
     <div style="height: 50px;"></div>
 
   </div>
+
+
+  <script>showPubs(1);</script>
+<!--  <script>var scroll = new SmoothScroll('a[href*="#"]', {speed: 1000});</script>-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

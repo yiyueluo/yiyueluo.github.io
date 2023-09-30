@@ -41,6 +41,8 @@ function showPubs(id) {
   }
 }
 
+
+
 function showRecruit() {
   if (recruit == 0) {
     document.getElementById('recruit').style='display:inline-block';

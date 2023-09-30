@@ -50,12 +50,16 @@
 
 </head>
 
-
-<body>
+<!--<body>-->
+<style>
+  body {
+    padding: 0;
+  }
+</style>
   <!-- nav-bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid" style="width: 80%;">
-      <a class="navbar-brand" href="./index">Yiyue Luo</a>
+      <a class="navbar-brand" href="./index.html">Yiyue Luo</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -69,14 +73,11 @@
             <a class="nav-link active" aria-current="page" href="./index.html#news">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./index.html#pubs">Publications</a>
+            <a class="nav-link active" aria-current="page" href="./index.html#pub">Publications</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./index.html#exp">Experience</a>
+            <a class="nav-link active" aria-current="page" href="./experience.html">Experience</a>
           </li>
-<!--          <li class="nav-item">-->
-<!--            <a class="nav-link" href="./projects">Projects</a>-->
-<!--          </li>-->
         </ul>
       </div>
     </div>
@@ -141,8 +142,8 @@
 
 
 <!--     Publication -->
-  <div class="container-fluid" style="width: 80%;">
-		<h4 style="margin-top: 30px;">
+  <div class="container-fluid" id="pub" style="width: 80%;">
+		<h4 style="margin-top: 30px;" >
           Publications
           <small><small>
             (<a  id="select0" onclick="showPubs(0);">show selected</a> /
@@ -150,14 +151,6 @@
              <a  id="select2" onclick="showPubs(2);">show by topic</a>)
           </small></small>
         </h4>
-<!--        <br>-->
-
-<!--        <small>-->
-<!--          Research topics:-->
-<!--          <a href="t0" onclick="showPubs(2)" style>p</a> /-->
-<!--          <a href="t1" onclick="showPubs(2)" style>e</a>/-->
-<!--          <a href="t2" onclick="showPubs(2)" style>w</a>-->
-<!--        </small>-->
 
         <div id="pubs"></div>
 
@@ -337,7 +330,6 @@
           </div>
 
 		</script>
-
 
 		<script id="pubs_by_date" language="text">
 
@@ -1075,96 +1067,130 @@
 
 
 
-
-
     <!-- Experience -->
-  <div class="container-fluid" style="width: 80%;">
-    <h4 style="margin-top: 50px;" id="exp">Experience</h4>
+<!--  <div class="container-fluid" style="width: 80%;">-->
+<!--    <h4 style="margin-top: 50px;" id="exp">Professioanl Experience</h4>-->
+<!--      <ul>-->
+<!--        <li>Aug 2018 - present, Research Assistant, MIT Computer Science and Artificial Intelligence Laboratory, Cambridge, MA <br>-->
+<!--            Advisor: Prof.  <a href="https://cdfg.mit.edu/wojciech">Wojciech Matusik</a> & Prof.  <a href="https://www.tpalacios.mit.edu/">Tomas Palacios</a></li>-->
+<!--        <li>Jun 2023 - Sep 2023, Research Intern, Boston Dynamics AI Institute, Cambridge, MA <br>-->
+<!--            Mentor: Dr. <a href="https://brianokorn.com/">Brian Okorn</a> & Prof. <a href="https://www.cs.cmu.edu/~jkh/">Jessica Hodgins</a></li>-->
+<!--        <li>May 2022 - Aug 2022, Research Intern, Microsoft Research, Redmond, WA <br>-->
+<!--            Mentor: Dr. <a href="https://www.microsoft.com/en-us/research/people/teddy/">Teddy Seyed</a></li>-->
+<!--        <li>Mar 2018 - Aug 2018, Research Intern, Chinese Academy of Science, Guangzhou, China <br>-->
+<!--            Mentor: Dr. <a href="https://english.cas.cn/institutes/research_bodies/guangzhou/">Xuetong Sun</a></li>-->
+<!--        <li>Jan 2016 - Dec 2017, Undergraduate Research Assistant, University of Illinois at Urbana Champaign, Urbana, IL <br>-->
+<!--            Advisor: Prof. <a href="https://rogersgroup.northwestern.edu/">John A. Roger</a> & Dr. <a href="https://engineering.missouri.edu/faculty/zheng-yan/">Zheng Yan</a> </li>-->
+<!--      </ul>-->
+<!--  </div>-->
 
-<!--    <div class="row" style="margin-top: 10px;">-->
-<!--      <div class="col-8">-->
-<!--        <div>Microsoft Research-->
-<!--        </div>-->
-<!--        <div><i>Research Intern | Mentor: Dr. Teddy Seyed </i> </div>-->
-<!--      </div>-->
-<!--      <div class="col-4" style="text-align: right;">-->
-<!--        <div>May 2022 - Aug 2022 </div>-->
-<!--        <div>Redmond, Washington </div>-->
-<!--      </div>-->
-<!--    </div>-->
+<!--    &lt;!&ndash; honors &ndash;&gt;-->
+<!--  <div class="container-fluid" style="width: 80%;">-->
+<!--    <h4 style="margin-top: 30px;" >Selected Honors</h4>-->
+<!--      <ul>-->
+<!--        <li>Accenture Fellowship, 2023</li>-->
+<!--        <li>Meta Fellowship Finallist, 2023</li>-->
+<!--        <li>MIT Schwarzman College of Computing Fellowship by Google, 2022</li>-->
+<!--        <li>MathWorks Fellowship, 2021</li>-->
+<!--        <li>Best Paper Honorable Mention, CHI 2021</li>-->
+<!--        <li>James Scholar, for outstanding students in Engineering College at UIUC, 2017</li>-->
+<!--        <li>Cullen W. Parmelee International Research Scholar, for outstanding international undergraduate researcher in Materials Science and Engineering at UIUC, 2017</li>-->
+<!--        <li>Dean’s List, for outstanding academic performance at UIUC, 2015-2017</li>-->
+<!--        <li>Alfred W. Allen Award, for outstanding students in Materials Science and Engineering department at UIUC, 2015</li>-->
+<!--      </ul>-->
+<!--  </div>-->
 
 
-    <div class="row" style="margin-top: 10px;">
-      <div class="col-8">
-        <div>Massachusetts Institute of Technology </div>
-        <div><i>Research Assistant | Advisor: Prof. Wojciech Matusik & Prof. Tomas Palacios</i> </div>
-      </div>
-      <div class="col-4" style="text-align: right;">
-        <div>Aug 2018 - present </div>
-        <div>Cambridge, Massachusetts </div>
-      </div>
-    </div>
 
-    <div class="row" style="margin-top: 10px;">
-      <div class="col-8">
-        <div>Boston Dynamics AI Institute </div>
-        <div><i>Research Intern | Mentor: Dr. Brian Okorn & Prof. Jessica Hodgins</i> </div>
-      </div>
-      <div class="col-4" style="text-align: right;">
-        <div>Jun 2023 - Sep 2023 </div>
-        <div>Cambridge, Massachusetts </div>
-      </div>
-    </div>
+<!--      &lt;!&ndash; teaching &ndash;&gt;-->
+<!--  <div class="container-fluid" style="width: 80%;">-->
+<!--    <h4 style="margin-top: 30px;" >Teaching</h4>-->
+<!--      <ul>-->
+<!--        <li>Kaufman Teaching Certificate, MIT, 2023 </li>-->
+<!--        <li>Graduate Teaching Assistant, 6.336 Introduction to Numerical Simulation, MIT, 2021 </li>-->
+<!--        <li>Guest lecturer, MAS.865 Rapid-Prototyping of Rapid-Prototyping Machines, MIT, 2021</li>-->
+<!--        <li>Guest lecturer, 3.173 Computing Fabrics, MIT, 2021</li>-->
+<!--        <li>Instructor, IEFX 198 Introductory first-year experience courses, UIUC, 2017</li>-->
+<!--        <li>Instructor, ENG 100 Introductory first-year experience courses, UIUC, 2016</li>-->
+<!--      </ul>-->
+<!--  </div>-->
 
-    <div class="row" style="margin-top: 10px;">
-      <div class="col-8">
-        <div>Microsoft Research
-        </div>
-        <div><i>Research Intern | Mentor: Dr. Teddy Seyed </i> </div>
-      </div>
-      <div class="col-4" style="text-align: right;">
-        <div>May 2022 - Aug 2022 </div>
-        <div>Redmond, Washington </div>
-      </div>
-    </div>
+<!--&lt;!&ndash;        &lt;!&ndash; Mentoring &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="container-fluid" style="width: 80%;">&ndash;&gt;-->
+<!--&lt;!&ndash;    <h4 style="margin-top: 30px;" >Mentoring</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;      <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li>Young Lee: now Ph.D. at MIT </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li>Tiffany Louie: incoming M.ENG. at MIT</li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li>Sylvie Waft: </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li>Joshua Jacob: now visitng student at MIT</li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li>Lara Zlokapa: now at Illumina</li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li>Lucas Ventura: </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li>Jacqueline Aslarus: now undergraduate at MIT</li>&ndash;&gt;-->
+<!--&lt;!&ndash;      </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
 
-    <div class="row" style="margin-top: 10px;">
-      <div class="col-8">
-        <div>Chinese Academy of Science
-        </div>
-        <div><i>Research Intern | Mentor: Dr. Xuetong Sun </i> </div>
-      </div>
-      <div class="col-4" style="text-align: right;">
-        <div>Mar 2018 - Aug 2018 </div>
-        <div>Guangzhou, China </div>
-      </div>
-    </div>
 
-    <div class="row" style="margin-top: 10px;">
-      <div class="col-8">
-        <div>University of Illinois at Urbana Champaign </div>
-        <div><i>Undergraduate Research Assistant | Advisor: Prof. John A. Roger & Dr. Zheng Yan </i> </div>
-      </div>
-      <div class="col-4" style="text-align: right;">
-        <div>Jan 2016 - Dec 2017 </div>
-        <div>Urbana, Illinois </div>
-      </div>
-    </div>
+<!--        &lt;!&ndash; Service &ndash;&gt;-->
+<!--  <div class="container-fluid" style="width: 80%;">-->
+<!--    <h4 style="margin-top: 30px;" >Service</h4>-->
+<!--      <ul>-->
+<!--        <li>Course Aide, Academic Faculty Serach Seminar, MIT, 2023</li>-->
+<!--        <li>Volunteer for PhD visit days, EECS Graduate Student Association, 2019-2020</li>-->
+<!--        <li>Vice President, EECS Graduate Student Association, 2018</li>-->
+<!--        <li>Program Committee: AHRI 2022, WRC SARA 2021</li>-->
+<!--        <li>Journals reviewing: Soft Robotics, Computer-Aided Design, Nature Machine Intelligence; IEEE Sensors; Virtual Reality</li>-->
+<!--        <li>Conferences reviewing: ACM CHI 2021-2024; ACM UIST 2021-2023; ACM HRI 2021-2023; ICRA 2022-2023</li>-->
+<!--      </ul>-->
+<!--  </div>-->
 
-    <div class="row" style="margin-top: 10px;">
-      <div class="col-8">
-        <div>University of Illinois at Urbana Champaign </div>
-        <div><i>Engineering Learning Assistant </i> </div>
-      </div>
-      <div class="col-4" style="text-align: right;">
-        <div>Jan 2016 - Dec 2017 </div>
-        <div>Urbana, Illinois </div>
-      </div>
-    </div>
+<!--          &lt;!&ndash; press &ndash;&gt;-->
+<!--  <div class="container-fluid" style="width: 80%;">-->
+<!--    <h4 style="margin-top: 30px;" >Selected Press</h4>-->
+<!--      <ul>-->
+<!--        <li>A natural and comfortable ’seamless-walk’ virtual reality locomotion system:-->
+<!--          <a href="https://www.csail.mit.edu/news/mit-and-gist-researchers-develop-natural-and-comfortable-seamless-walk-vr-locomotion-system">MIT News</a>,-->
+<!--          <a href="https://finance.yahoo.com/news/gwangju-institute-science-technology-mit-123300431.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuY3NhaWwubWl0LmVkdS8&guce_referrer_sig=AQAAAFSEUfjDU1oXhiXwBXocDSFr8HQ4NWeXD7n3Ux1Qt80bCSWGlT99cV0vt82xEKaL_ZftYaBIVJRkcDEdySLQEZVspCpAq5Q6knPe3NIJupECgQreZpwNmxc1FWb2YL4QzL6aJky-y2YozHHk-la5XshqiWK_LRltXH6aqzHWDN8y">Yahoo Finance</a>,-->
+<!--          <a href="https://www.benzinga.com/pressreleases/23/04/n31766802/gwangju-institute-of-science-and-technology-and-mit-researchers-develop-a-natural-and-comfortable-">Benzinga</a>,-->
+<!--          <a href="{https://www.eurekalert.org/news-releases/985635/">EurekAlert</a>-->
+<!--        </li>-->
+<!--        <li>A helping hand for robotic manipulator design:-->
+<!--          <a href="https://news.mit.edu/2022/hand-robotic-manipulator-design-0525">MIT News</a>,-->
+<!--          <a href="https://hackaday.com/2022/06/23/design-your-next-robot-hand-in-minutes/">Hackaday</a>,-->
+<!--          <a href="https://www.techbriefs.com/component/content/article/tb/tv/46475">Tech Briefs</a>,-->
+<!--          <a href="https://robotics.ee/2022/05/26/interactive-design-pipeline-enables-anyone-to-create-their-own-customized-robotic-hand/">Robotics.ee</a>-->
+<!--        </li>-->
+<!--        <li>Soft assistive robotic wearables get a boost from rapid design tool:-->
+<!--          <a href="https://www.kent.edu/museum/event/knitting-beyond-body">Kent State University Museum Exhibition</a>,-->
+<!--          <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503">MIT News</a>,-->
+<!--          <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable">mASHABLE</a>,-->
+<!--          <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/">TechCrunch</a>,-->
+<!--          <a href="https://www.pioneeringminds.com/soft-assistive-robotic-wearables-get-boost-rapid-design-tool/">Pioneering Minds</a>-->
+<!--        </li>-->
+<!--        <li>A simple diagnostic tool for gastrointestinal disorders:-->
+<!--          <a href="https://news.mit.edu/2022/gastrointestinal-diagnostic-quipu-0322">MIT News</a>,-->
+<!--        </li>-->
+<!--        <li>Intelligent carpet gives insight into human poses:-->
+<!--          <a href="https://news.mit.edu/2021/intelligent-carpet-gives-insight-human-poses-0624">MIT News</a>,-->
+<!--          <a href="https://www.inceptivemind.com/mits-ai-smart-carpet-estimates-human-poses-without-using-camera/19809/">Inceptive Mind</a>,-->
+<!--          <a href="https://www.dailymail.co.uk/sciencetech/article-9716977/MIT-develops-magic-carpet-detect-person-doing-sit-ups-exercises.html">Daily Mail</a>,-->
+<!--          <a href="https://www.zdnet.com/article/mit-makes-an-ai-smart-carpet-for-monitoring-people-without-cameras/">ZDNet</a>-->
+<!--&lt;!&ndash;          <a href="https://techxplore.com/news/2021-03-smart-movements.html">Tech Xplore</a>&ndash;&gt;-->
+<!--        </li>-->
+<!--        <li>Tactile textiles sense movement via touch:-->
+<!--          <a href="https://news.mit.edu/2021/tactile-textiles-sense-movement-via-touch-0331">MIT News</a>,-->
+<!--          <a href="https://www.nature.com/articles/s41928-021-00560-6">Nature Electronics News & Views</a>,-->
+<!--          <a href="https://www.fastcompany.com/90621085/these-mit-designed-clothes-will-correct-your-slouch">Fast Company</a>,-->
+<!--          <a href="https://mashable.com/video/mit-smart-clothing">Mashable</a>,-->
+<!--          <a href="https://techxplore.com/news/2021-03-smart-movements.html">Tech Xplore</a>-->
+<!--        </li>-->
 
-    <div style="height: 50px;"></div>
+<!--      </ul>-->
+<!--  </div>-->
 
-  </div>
+
+
+  <div style="height: 50px;"></div>
+
 
 
   <script>showPubs(1);</script>
@@ -1173,6 +1199,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-</body>
+<!--</body>-->
 
 </html>

@@ -1,0 +1,10 @@
+Manual Embroidery Procedures
+1. Refer to material list and prepare materials. 
+2. Generate corresponding digital embroidery design file.
+3. Cut pressure-sensitive sheet into desired shape.
+4. Mount pressure-sensitive sheet onto the digital embroidery frame.
+5. Load conductive thread as top thread and polyester thread as bobbin.
+6. Run machine with the first embroidery pass for vertical electrodes. 
+7. Load conductive thread as bobbin and polyester thread as top thread. 
+8. Run machine with the second embroidery pass for horizontal electrodes.
+9. Add optional insulating layer using fabric or plastic film with adhesive. 

@@ -1,0 +1,17 @@
+Manual Fabrication Procedures
+1. Refer to material list and prepare materials. 
+2. Cut pressure-sensitive sheet into desired shape.
+3. Cut 2 pieces of thin adhesive into desired shape.
+4. Align horizontal electrodes on one of the thin adhesive.
+5. Attach the adhesive with aligned electrodes on one side of the pressure-sensitive film.
+6. Align horizontal electrodes on the other piece of thin adhesive.
+7. Attach the adhesive with aligned electrodes on the other side of the pressure-sensitive film.
+8. Carefully remove the cover of adhesive, and attach the thin plastic sheet on top of it for insulation.
+9. Repeat for the other side. 
+10. Make electrical connection between the aligend vertical/horizontal electrodes with 2 sets of ribbon cables.
+11. Connect the ribbon cable with the readout circuit using the connector. 
+
+
+
+
+

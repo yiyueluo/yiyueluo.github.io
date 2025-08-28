@@ -112,15 +112,41 @@
 
 
             <div class="container-fluid" style="width: 80%;">
-                <h3 style="margin-top: 50px; text-align: center;" >News</h3>
-                <ul>
-                    <li>[01/2025] 3 papers, 2 late-breaking works, and a course were preseted at CHI 2025 in Yokohama Japan.
-                    <li>[01/2025] We presented a full paper and an abstract at RoboSoft 2025 in Lausanne, Switzerland. 
-                    <li>[01/2025] Huge congratulations to Ray for an Honorable Mention to <a href="https://hripioneers.org/">HRI Pioneers 2025</a>.
-                    <li>[09/2024] We are actively recruiting graduate and undergraduate researchers. Check out opportunities <a href="./opportunity.html">here</a>!
-                    <li>[09/2024] The Wearable Intelligence Lab at UW ECE is established!
+                <h3 style="margin-top: 50px; text-align: center;">News</h3>
+                <ul style="margin-bottom: 0; padding-left: 20px;">
+                    <li>[08/2025] 3 papers and a poster were presented at UIST 2025. Congratulations to Feier, Hongrui, Harry, Mingzhuo, Qifeng, Sen, Yuxuan, and Jazlin!</li>
+                    <li>[05/2025] Huge congratulations to Sen for the UW ECE Entrepreneurship Fellowship!</li>
+                    <!-- Collapsible Section -->
+                    <div id="hidden-news" style="display: none;">
+                        <li>[01/2025] 3 papers, 2 late-breaking works, and a course were presented at CHI 2025 in Yokohama, Japan.</li>
+                        <li>[01/2025] We presented a full paper and an abstract at RoboSoft 2025 in Lausanne, Switzerland.</li>
+                        <li>[01/2025] Huge congratulations to Ray for an Honorable Mention to 
+                            <a href="https://hripioneers.org/">HRI Pioneers 2025</a>.
+                        </li>
+                    </div>
+                    <li>[09/2024] We are actively recruiting graduate and undergraduate researchers. Check out opportunities <a href="./opportunity.html">here</a>!</li>
+                    <li>[09/2024] The Wearable Intelligence Lab at UW ECE is established!</li>
                 </ul>
+            
+                <!-- Toggle button -->
+                <div style="text-align: center;">
+                    <button id="toggle-btn" class="btn btn-link">Show more</button>
+                </div>
+
             </div>
+            
+            <script>
+                document.getElementById("toggle-btn").addEventListener("click", function() {
+                    const hiddenNews = document.getElementById("hidden-news");
+                    if (hiddenNews.style.display === "none") {
+                        hiddenNews.style.display = "block";
+                        this.textContent = "Show less";
+                    } else {
+                        hiddenNews.style.display = "none";
+                        this.textContent = "Show more";
+                    }
+                });
+            </script>
 
 
 

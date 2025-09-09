@@ -24,18 +24,18 @@
     html,body{height:100%;}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased;}
     .wrap{max-width:1060px;margin-inline:auto;padding:24px;}
-    header.hero{position:relative;border-radius:20px;overflow:hidden;background:radial-gradient(1200px 400px at 50% 140%, rgba(255,255,255,.06), transparent 60%),
-      linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0) 40%),
+    header.hero{position:relative;border-radius:20px;overflow:hidden;background:radial-gradient(1200px 400px at 50% 140%, rgba(0,0,0,.04), transparent 60%),
+      linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,0) 40%),
       #edeff5;box-shadow:0 10px 40px rgba(182, 182, 182, 0.25);}
-    /* Abstract needle‑bed pattern */
+    /* Abstract needle-bed pattern */
     header.hero::before{content:"";position:absolute;inset:0;background:
       repeating-linear-gradient(
         to right,
-        rgba(255,255,255,.14) 0 1px,
-        rgba(255,255,255,0) 1px 16px
+        rgba(0,0,0,.06) 0 1px,
+        rgba(0,0,0,0) 1px 16px
       ),
-      linear-gradient(to bottom, rgba(255,255,255,.08), rgba(255,255,255,0) 58%);
-      opacity:.22;mix-blend-mode:screen;}
+      linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,0) 58%);
+      opacity:.22;mix-blend-mode:multiply;}
     .hero-inner{position:relative;display:grid;gap:18px;padding:64px 28px 40px 28px;}
     h1{margin:0;font-weight:800;letter-spacing:.4px;line-height:1.05;font-size:clamp(28px,5vw,54px);} 
     .tagline{font-size:clamp(14px,2.2vw,18px);color:var(--muted);max-width:60ch}
@@ -48,7 +48,6 @@
     section{margin-top:28px}
     .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:20px}
     .grid{display:grid;gap:18px}
-    @media(min-width:880px)
     h2{margin:0 0 8px;font-size:24px}
     .schedule{width:100%;border-collapse:collapse}
     .schedule th,.schedule td{padding:12px 14px;border-bottom:1px dashed var(--ring);vertical-align:top}
@@ -58,6 +57,14 @@
     .resources a{display:inline-flex;align-items:center;gap:6px;margin-right:10px;padding:6px 10px;border-radius:10px;border:1px solid var(--ring);text-decoration:none;color:inherit}
     .muted{color:var(--muted)}
     footer{margin:34px 0 20px;color:var(--muted);font-size:14px}
+
+    /* Organizers */
+    .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:10px}
+    .person{display:flex;gap:14px;padding:12px;border:1px solid var(--ring);border-radius:14px;background:rgba(255,255,255,.02);text-decoration:none;color:inherit}
+    .person:hover{transform:translateY(-1px);transition:transform .15s ease}
+    .avatar{width:72px;height:72px;border-radius:12px;object-fit:cover;background:#d9dde6;border:1px solid var(--ring)}
+    .person h3{margin:0 0 2px 0;font-size:18px}
+    .person p{margin:0;color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
@@ -65,7 +72,7 @@
     <header class="hero" role="banner">
       <div class="hero-inner">
         <h1>Digital Machine Knitting Workshop</h1>
-        <p class="tagline">A hands-on introduction to machine knitting and e‑textiles using digital design tools and Shima Seiki workflows.</p>
+        <p class="tagline">A hands-on introduction to machine knitting and e-textiles using digital design tools and Shima Seiki workflows.</p>
         <div class="meta" aria-label="Event details">
           <span class="chip" title="Date" aria-label="Date">
             <!-- calendar icon -->
@@ -91,17 +98,13 @@
         <tbody>
           <tr>
             <td class="when">9:30 – 9:45</td>
-            <td>
-              <strong>Introduction</strong>
-            </td>
+            <td><strong>Introduction</strong></td>
           </tr>
           <tr>
             <td class="when">9:45 – 10:30</td>
             <td>
               <strong>Foundations of machine knitting</strong>
-              <span class="resources">
-                <a href="#" aria-label="Slides for Foundations">📑 slide</a>
-              </span>
+              <span class="resources"><a href="#" aria-label="Slides for Foundations">📑 slide</a></span>
             </td>
           </tr>
           <tr>
@@ -122,7 +125,7 @@
           <tr>
             <td class="when">1:00 – 2:00</td>
             <td>
-              <strong>Introduction to machine-knitted e‑textiles </strong>
+              <strong>Introduction to machine-knitted e-textiles</strong>
               <span class="resources">
                 <a href="#" aria-label="Slides for e-textiles intro">📑 slide</a>
                 <a href="#" aria-label="Examples for e-textiles intro">🧶 examples</a>
@@ -131,16 +134,45 @@
           </tr>
           <tr>
             <td class="when">2:00 – 4:30</td>
-            <td><strong>Hands‑on session</strong></td>
+            <td><strong>Hands-on session</strong></td>
           </tr>
           <tr>
             <td class="when">4:30 – 5:00</td>
-            <td><strong>Wrap‑up</strong></td>
+            <td><strong>Wrap-up</strong></td>
           </tr>
         </tbody>
       </table>
     </section>
-  </div>
 
+    <!-- Organizers -->
+    <section id="organizers" class="card" aria-labelledby="org-title">
+      <h2 id="org-title">Organizers</h2>
+      <div class="people">
+        <a class="person" href="https://yyueluo.com/" target="_blank" rel="noopener">
+          <img class="avatar" src="image/headshot6.jpg" alt="Portrait">
+          <div>
+            <h3>Yiyue Luo</h3>
+            <p>Assistant Professor — UW ECE</p>
+          </div>
+        </a>
+
+        <a class="person" href="https://www.linkedin.com/in/sen-zhang-99b6a617b/" target="_blank" rel="noopener">
+          <img class="avatar" src="image/SenZhang.jpg" alt="Portrait">
+          <div>
+            <h3>Sen Zhang</h3>
+            <p>Postdocteral Researcher — UW ECE</p>
+          </div>
+        </a>
+
+        <a class="person" href="https://catherineyu.com/" target="_blank" rel="noopener">
+          <img class="avatar" src="image/catherine-profile.jpeg" alt="Portrait">
+          <div>
+            <h3>Catherine Yu</h3>
+            <p>PhD Candidate — Cornell University</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
 </body>
 </html>

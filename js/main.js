@@ -1,53 +1,109 @@
-var scripts = document.getElementsByTagName('script');
-var myScript = scripts[scripts.length - 1];
-
-var queryString = myScript.src.replace(/^[^\?]+\??/, '');
-
-var params = parseQuery(queryString);
-
 var recruit = 0;
 
-function parseQuery(query) {
-    var Params = {};
-    if (!query) return Params; // return empty object
-    var Pairs = query.split(/[;&]/);
-    for (var i = 0; i < Pairs.length; i++) {
-        var KeyVal = Pairs[i].split('=');
-        if (!KeyVal || KeyVal.length != 2) continue;
-        var key = unescape(KeyVal[0]);
-        var val = unescape(KeyVal[1]);
-        val = val.replace(/\+/g, ' ');
-        Params[key] = val;
+function setPubToggleState(activeId) {
+  ["select0", "select1", "select2"].forEach(function (toggleId) {
+    var toggle = document.getElementById(toggleId);
+    if (!toggle) {
+      return;
     }
-    return Params;
+
+    if (toggleId === activeId) {
+      toggle.classList.add("pub-toggle-active");
+    } else {
+      toggle.classList.remove("pub-toggle-active");
+    }
+  });
 }
 
 function showPubs(id) {
-  if (id == 0) {
-    document.getElementById('pubs').innerHTML = document.getElementById('pubs_selected').innerHTML;
-    document.getElementById('select0').style = 'text-decoration:underline;color:#000000;cursor:pointer;';
-    document.getElementById('select1').style = 'cursor:pointer;';
-    document.getElementById('select2').style = 'cursor:pointer;';
-  } else if (id == 1) {
-    document.getElementById('pubs').innerHTML = document.getElementById('pubs_by_date').innerHTML;
-    document.getElementById('select1').style = 'text-decoration:underline;color:#000000;cursor:pointer;';
-    document.getElementById('select0').style = 'cursor:pointer;';
-    document.getElementById('select2').style = 'cursor:pointer;';
-  } else {
-    document.getElementById('pubs').innerHTML = document.getElementById('pubs_by_topic').innerHTML;
-    document.getElementById('select2').style = 'text-decoration:underline;color:#000000;cursor:pointer;';
-    document.getElementById('select0').style = 'cursor:pointer;';
-    document.getElementById('select1').style = 'cursor:pointer;';
+  var pubs = document.getElementById("pubs");
+  if (!pubs) {
+    return;
   }
+
+  var sourceId = "pubs_selected";
+  var activeId = "select0";
+
+  if (id === 1) {
+    sourceId = "pubs_by_date";
+    activeId = "select1";
+  } else if (id === 2) {
+    sourceId = "pubs_by_topic";
+    activeId = "select2";
+  }
+
+  var source = document.getElementById(sourceId);
+  if (!source) {
+    return;
+  }
+
+  pubs.innerHTML = source.innerHTML;
+  setPubToggleState(activeId);
 }
-
-
 
 function showRecruit() {
-  if (recruit == 0) {
-    document.getElementById('recruit').style='display:inline-block';
-  } else {
-    document.getElementById('recruit').style='display:none';
+  var recruitEl = document.getElementById("recruit");
+  if (!recruitEl) {
+    return;
   }
+
+  recruitEl.style.display = recruit === 0 ? "inline-block" : "none";
   recruit = 1 - recruit;
 }
+
+function setupNavToggles() {
+  var toggles = document.querySelectorAll(".navbar-toggler");
+
+  toggles.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var targetSelector = button.getAttribute("data-bs-target") || button.getAttribute("data-target");
+      var target = null;
+
+      if (targetSelector) {
+        target = document.querySelector(targetSelector);
+      }
+
+      if (!target) {
+        var controlsId = button.getAttribute("aria-controls");
+        if (controlsId) {
+          target = document.getElementById(controlsId);
+        }
+      }
+
+      if (!target) {
+        return;
+      }
+
+      var isExpanded = target.classList.toggle("show");
+      button.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+    });
+  });
+}
+
+function setupDisclosureToggles() {
+  var toggles = document.querySelectorAll("[data-toggle-target]");
+
+  toggles.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var selector = button.getAttribute("data-toggle-target");
+      var target = selector ? document.querySelector(selector) : null;
+
+      if (!target) {
+        return;
+      }
+
+      var hiddenClass = button.getAttribute("data-toggle-class") || "is-collapsed";
+      target.classList.toggle(hiddenClass);
+      var expanded = !target.classList.contains(hiddenClass);
+      button.textContent = expanded
+        ? button.getAttribute("data-label-less") || "Show less"
+        : button.getAttribute("data-label-more") || "Show more";
+      button.setAttribute("aria-expanded", expanded ? "true" : "false");
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  setupNavToggles();
+  setupDisclosureToggles();
+});

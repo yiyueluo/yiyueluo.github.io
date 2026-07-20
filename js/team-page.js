@@ -25,7 +25,11 @@
         return [
           '<article class="member-card">',
           '<img src="' + member.image + '" alt="' + member.name + '">',
-          '<h3 class="member-name"><a href="' + member.url + '" target="_blank">' + member.name + "</a></h3>",
+          '<h3 class="member-name"><a href="' +
+            member.url +
+            '" target="_blank">' +
+            member.name +
+            "</a></h3>",
           '<p class="member-role">' + member.role + "</p>",
           "</article>",
         ].join("");
@@ -48,7 +52,15 @@
   function renderAlumni(alumni) {
     return alumni
       .map(function (person) {
-        return '<li><a href="' + person.url + '" target="_blank">' + person.name + "</a>: " + person.note + "</li>";
+        return (
+          '<li><a href="' +
+          person.url +
+          '" target="_blank">' +
+          person.name +
+          "</a>: " +
+          person.note +
+          "</li>"
+        );
       })
       .join("");
   }
@@ -70,7 +82,11 @@
         '<div class="profile-layout">',
         '<div><img class="profile-avatar" src="' + pi.image + '" alt="' + pi.name + '"></div>',
         "<div>",
-        '<h2 class="section-title"><a href="' + pi.profileUrl + '" target="_blank">' + pi.name + "</a></h2>",
+        '<h2 class="section-title"><a href="' +
+          pi.profileUrl +
+          '" target="_blank">' +
+          pi.name +
+          "</a></h2>",
         '<p class="section-subtitle">' + pi.bio + "</p>",
         '<div class="social-row">' + renderContacts(pi.contacts) + "</div>",
         "</div>",

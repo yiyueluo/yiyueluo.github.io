@@ -1,80 +1,151 @@
 // Add a new publication by appending one object to `window.publications`.
 // Then optionally include its `id` in `selectedOrder` and any topic section `items`.
 window.publicationConfig = {
-  selectedOrder: ["wiresens-toolkit-an-open-source-platform-towards-accesible-wireless-tactile-sens", "magtex-machine-knitted-magnetoactive-textiles-for-bidirectional-human-machine-in", "biogem-a-fully-biodegradable-gelatin-based-mckibben-actuator-with-embedded-sensi", "bandei-a-flexible-electrical-impedance-sensing-bandage-for-deep-muscles-and-tend", "fibercircuits-an-open-platform-to-embed-integrated-circuits-inside-fibers", "locotouch-learning-dexterous-quadrupedal-transport-with-tactile-sensing", "3d-vitac-learning-fine-grained-manipulation-with-visuo-tactile-sensing", "intelligent-textiles-are-looking-bright", "adaptive-tactile-interaction-transfer-via-digitally-embroidered-smart-gloves", "tactile-embeddings-for-multi-task-learning", "liquids-identification-and-manipulation-via-digitally-fabricated-impedance-senso", "magknitic-machine-knitted-passive-and-interactive-haptic-textiles-with-integrate", "actionsense-a-multimodal-dataset-and-recording-framework-for-human-activities-us", "digital-fabrication-of-pneumatic-actuators-with-integrated-sensing-by-machine-kn", "an-integrated-design-pipeline-for-tactile-sensing-robotic-manipulators", "dynamic-modeling-of-hand-object-interactions-via-tactile-sensing", "intelligent-carpet-inferring-3d-human-pose-from-tactile-signals", "learning-human-environment-interactions-using-conformal-tactile-textiles", "knitui-fabricating-interactive-and-sensing-textiles-with-machine-knitting"],
+  selectedOrder: [
+    "knittable-electronic-textiles-for-intelligent-soft-wearables",
+    "magball-magnetic-rollerball-for-multi-scale-contact-interactions-on-diverse-surfaces",
+    "3d-printing-of-passively-actuated-self-folding-robots-with-integrated-functional-modules",
+    "a-closed-loop-cpr-training-glove-with-integrated-tactile-sensing-and-haptic-feedback",
+    "wiresens-toolkit-an-open-source-platform-towards-accesible-wireless-tactile-sens",
+    "magtex-machine-knitted-magnetoactive-textiles-for-bidirectional-human-machine-in",
+    "biogem-a-fully-biodegradable-gelatin-based-mckibben-actuator-with-embedded-sensi",
+    "bandei-a-flexible-electrical-impedance-sensing-bandage-for-deep-muscles-and-tend",
+    "fibercircuits-an-open-platform-to-embed-integrated-circuits-inside-fibers",
+    "locotouch-learning-dexterous-quadrupedal-transport-with-tactile-sensing",
+    "3d-vitac-learning-fine-grained-manipulation-with-visuo-tactile-sensing",
+    "intelligent-textiles-are-looking-bright",
+    "adaptive-tactile-interaction-transfer-via-digitally-embroidered-smart-gloves",
+    "tactile-embeddings-for-multi-task-learning",
+    "liquids-identification-and-manipulation-via-digitally-fabricated-impedance-senso",
+    "magknitic-machine-knitted-passive-and-interactive-haptic-textiles-with-integrate",
+    "actionsense-a-multimodal-dataset-and-recording-framework-for-human-activities-us",
+    "digital-fabrication-of-pneumatic-actuators-with-integrated-sensing-by-machine-kn",
+    "an-integrated-design-pipeline-for-tactile-sensing-robotic-manipulators",
+    "dynamic-modeling-of-hand-object-interactions-via-tactile-sensing",
+    "intelligent-carpet-inferring-3d-human-pose-from-tactile-signals",
+    "learning-human-environment-interactions-using-conformal-tactile-textiles",
+    "knitui-fabricating-interactive-and-sensing-textiles-with-machine-knitting",
+  ],
   topicSections: [
-  {
-    "id": "human-data-capturing-and-learning",
-    "title": "Human Data Capturing and Learning",
-    "items": [
-      "magtex-machine-knitted-magnetoactive-textiles-for-bidirectional-human-machine-in",
-      "bandei-a-flexible-electrical-impedance-sensing-bandage-for-deep-muscles-and-tend",
-      "ei-lite-electrical-impedance-sensing-for-micro-gesture-recognition-and-pinch-for",
-      "telepulse-enhancing-the-teleoperation-experience-through-biomechanical-simulatio",
-      "fip-endowing-robust-motion-capture-on-daily-garment-by-fusing-flex-and-inertial-",
-      "adaptive-tactile-interaction-transfer-via-digitally-embroidered-smart-gloves",
-      "actionsense-a-multimodal-dataset-and-recording-framework-for-human-activities-us",
-      "dynamic-modeling-of-hand-object-interactions-via-tactile-sensing",
-      "intelligent-carpet-inferring-3d-human-pose-from-tactile-signals",
-      "learning-human-environment-interactions-using-conformal-tactile-textiles"
-    ]
-  },
-  {
-    "id": "human-computer-interactions",
-    "title": "Human-Computer Interactions",
-    "items": [
-      "wiresens-toolkit-an-open-source-platform-towards-accesible-wireless-tactile-sens",
-      "luxknit-fabricating-interactive-display-textiles-integrated-with-sensing-by-mach",
-      "magknitic-machine-knitted-passive-and-interactive-haptic-textiles-with-integrate",
-      "project-mihr-enabling-gestural-interactions-on-a-keyboard-using-a-graphene-based",
-      "digital-fabrication-of-pneumatic-actuators-with-integrated-sensing-by-machine-kn",
-      "knitui-fabricating-interactive-and-sensing-textiles-with-machine-knitting"
-    ]
-  },
-  {
-    "id": "robotics",
-    "title": "Robotics",
-    "items": [
-      "locotouch-learning-dexterous-quadrupedal-transport-with-tactile-sensing",
-      "soda-soft-origami-dynamic-utensil-for-assisted-feeding",
-      "3d-vitac-learning-fine-grained-manipulation-with-visuo-tactile-sensing",
-      "tactile-embeddings-for-multi-task-learning",
-      "liquids-identification-and-manipulation-via-digitally-fabricated-impedance-senso",
-      "enable-natural-tactile-interaction-for-robot-dog-based-on-large-format-distribut",
-      "an-integrated-design-pipeline-for-tactile-sensing-robotic-manipulators"
-    ]
-  },
-  {
-    "id": "advanced-materials-design-and-device-fabrication",
-    "title": "Advanced Materials, Design, and Device Fabrication",
-    "items": [
-      "fibercircuits-an-open-platform-to-embed-integrated-circuits-inside-fibers",
-      "biogem-a-fully-biodegradable-gelatin-based-mckibben-actuator-with-embedded-sensi",
-      "integrated-biosensor-platform-based-on-graphene-transistor-arrays-for-real-time-",
-      "low-cost-gastrointestinal-manometry-via-silicone-liquid-metal-pressure-transduce",
-      "knit-sketching-from-cut-and-sew-patterns-to-machine-knit-garments",
-      "three-dimensional-mesostructures-as-high-temperature-growth-templates-electronic"
-    ]
-  },
-  {
-    "id": "ar-vr",
-    "title": "AR/VR",
-    "items": [
-      "seamless-walk-natural-and-comfortable-virtual-reality-locomotion-method-with-a-h"
-    ]
-  },
-  {
-    "id": "review-and-perspective",
-    "title": "Review & Perspective",
-    "items": [
-      "intelligent-textiles-are-looking-bright",
-      "deterministic-assembly-of-3d-mesostructures-in-advanced-materials-via-compressiv"
-    ]
-  }
-],
+    {
+      id: "human-data-capturing-and-learning",
+      title: "Human Data Capturing and Learning",
+      items: [
+        "a-closed-loop-cpr-training-glove-with-integrated-tactile-sensing-and-haptic-feedback",
+        "magtex-machine-knitted-magnetoactive-textiles-for-bidirectional-human-machine-in",
+        "bandei-a-flexible-electrical-impedance-sensing-bandage-for-deep-muscles-and-tend",
+        "ei-lite-electrical-impedance-sensing-for-micro-gesture-recognition-and-pinch-for",
+        "telepulse-enhancing-the-teleoperation-experience-through-biomechanical-simulatio",
+        "fip-endowing-robust-motion-capture-on-daily-garment-by-fusing-flex-and-inertial-",
+        "adaptive-tactile-interaction-transfer-via-digitally-embroidered-smart-gloves",
+        "actionsense-a-multimodal-dataset-and-recording-framework-for-human-activities-us",
+        "dynamic-modeling-of-hand-object-interactions-via-tactile-sensing",
+        "intelligent-carpet-inferring-3d-human-pose-from-tactile-signals",
+        "learning-human-environment-interactions-using-conformal-tactile-textiles",
+      ],
+    },
+    {
+      id: "human-computer-interactions",
+      title: "Human-Computer Interactions",
+      items: [
+        "magball-magnetic-rollerball-for-multi-scale-contact-interactions-on-diverse-surfaces",
+        "wiresens-toolkit-an-open-source-platform-towards-accesible-wireless-tactile-sens",
+        "luxknit-fabricating-interactive-display-textiles-integrated-with-sensing-by-mach",
+        "magknitic-machine-knitted-passive-and-interactive-haptic-textiles-with-integrate",
+        "project-mihr-enabling-gestural-interactions-on-a-keyboard-using-a-graphene-based",
+        "digital-fabrication-of-pneumatic-actuators-with-integrated-sensing-by-machine-kn",
+        "knitui-fabricating-interactive-and-sensing-textiles-with-machine-knitting",
+      ],
+    },
+    {
+      id: "robotics",
+      title: "Robotics",
+      items: [
+        "locotouch-learning-dexterous-quadrupedal-transport-with-tactile-sensing",
+        "soda-soft-origami-dynamic-utensil-for-assisted-feeding",
+        "3d-vitac-learning-fine-grained-manipulation-with-visuo-tactile-sensing",
+        "tactile-embeddings-for-multi-task-learning",
+        "liquids-identification-and-manipulation-via-digitally-fabricated-impedance-senso",
+        "enable-natural-tactile-interaction-for-robot-dog-based-on-large-format-distribut",
+        "an-integrated-design-pipeline-for-tactile-sensing-robotic-manipulators",
+      ],
+    },
+    {
+      id: "advanced-materials-design-and-device-fabrication",
+      title: "Advanced Materials, Design, and Device Fabrication",
+      items: [
+        "3d-printing-of-passively-actuated-self-folding-robots-with-integrated-functional-modules",
+        "fibercircuits-an-open-platform-to-embed-integrated-circuits-inside-fibers",
+        "biogem-a-fully-biodegradable-gelatin-based-mckibben-actuator-with-embedded-sensi",
+        "integrated-biosensor-platform-based-on-graphene-transistor-arrays-for-real-time-",
+        "low-cost-gastrointestinal-manometry-via-silicone-liquid-metal-pressure-transduce",
+        "knit-sketching-from-cut-and-sew-patterns-to-machine-knit-garments",
+        "three-dimensional-mesostructures-as-high-temperature-growth-templates-electronic",
+      ],
+    },
+    {
+      id: "ar-vr",
+      title: "AR/VR",
+      items: ["seamless-walk-natural-and-comfortable-virtual-reality-locomotion-method-with-a-h"],
+    },
+    {
+      id: "review-and-perspective",
+      title: "Review & Perspective",
+      items: [
+        "knittable-electronic-textiles-for-intelligent-soft-wearables",
+        "intelligent-textiles-are-looking-bright",
+        "deterministic-assembly-of-3d-mesostructures-in-advanced-materials-via-compressiv",
+      ],
+    },
+  ],
 };
 
 window.publications = [
+  {
+    id: "knittable-electronic-textiles-for-intelligent-soft-wearables",
+    title: "Knittable Electronic Textiles for Intelligent Soft Wearables",
+    image: "./image/knit.png",
+    alt: "Knittable electronic textiles for intelligent soft wearables",
+    year: 2026,
+    featured: true,
+    topics: ["review-and-perspective"],
+    contentHtml:
+      '<div>R. Takahashi; H. H. Chen; H. Mao; W. Yukita; T. Yokota; T. Someya; Y. Kawahara; <strong>Y. Luo</strong>; I. Wicaksono.</div><div><i>npj Flexible Electronics</i>, 2026. <a href="https://www.nature.com/articles/s41528-026-00611-y">[Paper]</a></div>',
+  },
+  {
+    id: "magball-magnetic-rollerball-for-multi-scale-contact-interactions-on-diverse-surfaces",
+    title: "MagBall: Magnetic Rollerball for Multi-Scale Contact Interactions on Diverse Surfaces",
+    image: "./image/magball.png",
+    alt: "MagBall",
+    year: 2026,
+    featured: true,
+    topics: ["human-computer-interactions"],
+    contentHtml:
+      '<div>C. Han; Y. Miao; S. Zhang; <strong>Y. Luo</strong>.</div><div><i>CHI</i>, 2026. <a href="https://dl.acm.org/doi/10.1145/3772318.3791366">[Paper]</a></div>',
+  },
+  {
+    id: "3d-printing-of-passively-actuated-self-folding-robots-with-integrated-functional-modules",
+    title:
+      "3D Printing of Passively Actuated Self-Folding Robots with Integrated Functional Modules",
+    image: "./image/icra2026_self_folding_robot.png",
+    alt: "Passively actuated self-folding robot",
+    year: 2026,
+    featured: false,
+    topics: ["advanced-materials-design-and-device-fabrication"],
+    contentHtml:
+      '<div>G. Ge; Q. Yang; H. Lu; T. Cheng; M. Nisser; <strong>Y. Luo</strong>.</div><div><i>ICRA</i>, 2026. <a href="https://arxiv.org/abs/2605.04757">[Paper]</a></div>',
+  },
+  {
+    id: "a-closed-loop-cpr-training-glove-with-integrated-tactile-sensing-and-haptic-feedback",
+    title: "A Closed-Loop CPR Training Glove with Integrated Tactile Sensing and Haptic Feedback",
+    image: "./image/cpr-glove-icra2026.png",
+    alt: "Closed-loop CPR training glove",
+    year: 2026,
+    featured: true,
+    topics: ["human-data-capturing-and-learning"],
+    contentHtml:
+      '<div>J. Moon; M. Ma; Q. Yang; Y. Choi; S. Hwang; S. Burden; K.-J. Kim; <strong>Y. Luo</strong>.</div><div><i>ICRA</i>, 2026. <a href="https://arxiv.org/abs/2603.05793">[Paper]</a></div>',
+  },
   {
     id: "wiresens-toolkit-an-open-source-platform-towards-accesible-wireless-tactile-sens",
     title: "WiReSens Toolkit: An Open-Source Platform Towards Accesible Wireless Tactile Sensing",
@@ -83,17 +154,20 @@ window.publications = [
     year: 2026,
     featured: true,
     topics: ["human-computer-interactions"],
-    contentHtml: "<div>\n                            <strong>D. Murphy</strong>; J. Zhu; A. Gadre; P. Liang; W. Matusik; <strong>Y. Luo</strong>.\n                          </div>\n                          <div>\n                            <i>TEI</i>, 2026.\n                            <a href=\"https://arxiv.org/abs/2412.00247\">[Paper]</a>\n                            <a href=\"https://github.com/WiReSens-Toolkit\">[Code]</a> </p>\n\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>D. Murphy; J. Zhu; A. Gadre; P. Liang; W. Matusik; <strong>Y. Luo</strong>.</div><div><i>TEI</i>, 2026. <a href="https://arxiv.org/abs/2412.00247">[Paper]</a> <a href="https://github.com/WiReSens-Toolkit">[Code]</a><p style="font-size:15px"><i class="fas fa-award"></i> Best Demo Honorable Mention Award</p></div>',
   },
   {
     id: "magtex-machine-knitted-magnetoactive-textiles-for-bidirectional-human-machine-in",
-    title: "MagTex: Machine-Knitted Magnetoactive Textiles for Bidirectional Human-Machine Interface",
+    title:
+      "MagTex: Machine-Knitted Magnetoactive Textiles for Bidirectional Human-Machine Interface",
     image: "./image/magtex-uist25.png",
     alt: "UIST2025",
     year: 2025,
     featured: true,
     topics: ["human-data-capturing-and-learning"],
-    contentHtml: "<div>\n                        <strong>S. Zhang</strong>; <strong>Y. Miao</strong>; <strong>J. Taylor</strong>; <strong>Y. Luo</strong>.\n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href=\"https://jsenz7.github.io/MagTex/\">[Project Page]</a>\n                        <a href=\"https://jsenz7.github.io/MagTex/static/pdfs/magtex.pdf\">[Paper]</a> </p>\n                        <p style=\"font-size:15px\"> <i class=\"fas fa-award\"></i> Best Paper Honorable Mention Award </p>\n                      </div>\n                    </div>",
+    contentHtml:
+      '<div>\n                        S. Zhang; Y. Miao; J. Taylor; <strong>Y. Luo</strong>.\n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href="https://jsenz7.github.io/MagTex/">[Project Page]</a>\n                        <a href="https://jsenz7.github.io/MagTex/static/pdfs/magtex.pdf">[Paper]</a> </p>\n                        <p style="font-size:15px"> <i class="fas fa-award"></i> Best Paper Honorable Mention Award </p>\n                      </div>\n                    </div>',
   },
   {
     id: "biogem-a-fully-biodegradable-gelatin-based-mckibben-actuator-with-embedded-sensi",
@@ -103,7 +177,8 @@ window.publications = [
     year: 2025,
     featured: true,
     topics: ["advanced-materials-design-and-device-fabrication"],
-    contentHtml: "<div>\n                        <strong>G. Ge</strong>; H. Lu; Y. Gao; <strong>Q. Yang</strong>; J. Hester; T. Cheng; <strong>Y. Luo</strong>.\n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href=\"https://sustainableactuator.ece.uw.edu/\">[Project Page]</a>\n                        <a href=\"https://drive.google.com/file/d/1ikuu9xlojgjrWbYaGchQJRIonBtElRno/view\">[Paper]</a>\n                      </div>\n                    </div>",
+    contentHtml:
+      '<div>\n                        G. Ge; H. Lu; Y. Gao; Q. Yang; J. Hester; T. Cheng; <strong>Y. Luo</strong>.\n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href="https://sustainableactuator.ece.uw.edu/">[Project Page]</a>\n                        <a href="https://drive.google.com/file/d/1ikuu9xlojgjrWbYaGchQJRIonBtElRno/view">[Paper]</a>\n                      </div>\n                    </div>',
   },
   {
     id: "bandei-a-flexible-electrical-impedance-sensing-bandage-for-deep-muscles-and-tend",
@@ -113,17 +188,20 @@ window.publications = [
     year: 2025,
     featured: true,
     topics: ["human-data-capturing-and-learning"],
-    contentHtml: "<div>\n                        <strong>H. Wu</strong>*; <strong>F. Long</strong>*; <strong>H. Mao</strong>; <strong>J. Moon</strong>; J. Zhu; <strong>Y. Luo</strong>.\n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href=\"https://flong513.github.io/BandEI/\">[Project Page]</a>\n                        <a href=\"https://flong513.github.io/BandEI/static/pdfs/bandei_camReady.pdf\">[Paper]</a>\n                      </div>\n                    </div>",
+    contentHtml:
+      '<div>\n                        H. Wu*; F. Long*; H. Mao; J. Moon; J. Zhu; <strong>Y. Luo</strong>.\n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href="https://flong513.github.io/BandEI/">[Project Page]</a>\n                        <a href="https://flong513.github.io/BandEI/static/pdfs/bandei_camReady.pdf">[Paper]</a>\n                      </div>\n                    </div>',
   },
   {
     id: "ei-lite-electrical-impedance-sensing-for-micro-gesture-recognition-and-pinch-for",
-    title: "EI-Lite: Electrical Impedance Sensing for Micro-gesture Recognition and Pinch Force Estimation",
+    title:
+      "EI-Lite: Electrical Impedance Sensing for Micro-gesture Recognition and Pinch Force Estimation",
     image: "./image/EI-Lite-uist25.avif",
     alt: "UIST2025",
     year: 2025,
     featured: false,
     topics: ["human-data-capturing-and-learning"],
-    contentHtml: "<div>\n                        J. Zhu; T. Xu; J. Wang; E. Guan; <strong>J. Moon</strong>; S. Morvan; D. Shin; A. Colaço; S. Mueller; K. Ahuja; <strong>Y. Luo</strong>; I. Chatterjee.\n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href=\"\">[Project Page]</a>\n                        <a href=\"h\">[Paper]</a>\n                      </div>\n                    </div>",
+    contentHtml:
+      '<div>\n                        J. Zhu; T. Xu; J. Wang; E. Guan; J. Moon; S. Morvan; D. Shin; A. Colaço; S. Mueller; K. Ahuja; <strong>Y. Luo</strong>; I. Chatterjee.\n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href="">[Project Page]</a>\n                        <a href="h">[Paper]</a>\n                      </div>\n                    </div>',
   },
   {
     id: "fibercircuits-an-open-platform-to-embed-integrated-circuits-inside-fibers",
@@ -133,7 +211,8 @@ window.publications = [
     year: 2025,
     featured: true,
     topics: ["advanced-materials-design-and-device-fabrication"],
-    contentHtml: "<div>\n                        C. Honnet; W. Babatain; <strong>Y. Luo</strong>; O. Kilic Afsar; C. Bensahel; S. Nicita; Y. Zhu; A. Danielescu; N. Gershenfeld; J. A. Paradiso.                      \n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href=\"https://www.media.mit.edu/projects/fibercircuits/overview/\">[Project Page]</a>\n                        <a href=\"https://dam-prod2.media.mit.edu/x/2025/08/10/FiberCircuits_UIST2025_dhvfHS3.pdf\">[Paper]</a>\n                      </div>\n                    </div>",
+    contentHtml:
+      '<div>\n                        C. Honnet; W. Babatain; <strong>Y. Luo</strong>; O. Kilic Afsar; C. Bensahel; S. Nicita; Y. Zhu; A. Danielescu; N. Gershenfeld; J. A. Paradiso.                      \n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href="https://www.media.mit.edu/projects/fibercircuits/overview/">[Project Page]</a>\n                        <a href="https://dam-prod2.media.mit.edu/x/2025/08/10/FiberCircuits_UIST2025_dhvfHS3.pdf">[Paper]</a>\n                      </div>\n                    </div>',
   },
   {
     id: "locotouch-learning-dexterous-quadrupedal-transport-with-tactile-sensing",
@@ -143,7 +222,8 @@ window.publications = [
     year: 2025,
     featured: true,
     topics: ["robotics"],
-    contentHtml: "<div>\n                        C. Lin; <strong>Y. Song</strong>; B. Huo; M. Yu; Y. Wang; S. Liu; Y. Yang; W. Yu; T; Zhang; J. Tan; <strong>Y. Luo</strong>; D. Zhao.\n                      </div>\n                      <div>\n                        <i>CoRL</i> 2025.\n                        <a href=\"https://linchangyi1.github.io/LocoTouch/\">[Project Page]</a>\n                      </div>\n                    </div>",
+    contentHtml:
+      '<div>\n                        C. Lin; Y. Song; B. Huo; M. Yu; Y. Wang; S. Liu; Y. Yang; W. Yu; T; Zhang; J. Tan; <strong>Y. Luo</strong>; D. Zhao.\n                      </div>\n                      <div>\n                        <i>CoRL</i> 2025.\n                        <a href="https://linchangyi1.github.io/LocoTouch/">[Project Page]</a>\n                      </div>\n                    </div>',
   },
   {
     id: "soda-soft-origami-dynamic-utensil-for-assisted-feeding",
@@ -153,37 +233,44 @@ window.publications = [
     year: 2025,
     featured: false,
     topics: ["robotics"],
-    contentHtml: "<div>\n                        <strong>Y. Song</strong>; <strong>Y. Luo</strong>.\n                      </div>\n                      <div>\n                        <i>RoboSoft</i> 2025.\n                        <a href=\"https://ieeexplore.ieee.org/abstract/document/11020887\">[Paper]</a>\n                      </div>\n                    </div>",
+    contentHtml:
+      '<div>\n                        Y. Song; <strong>Y. Luo</strong>.\n                      </div>\n                      <div>\n                        <i>RoboSoft</i> 2025.\n                        <a href="https://ieeexplore.ieee.org/abstract/document/11020887">[Paper]</a>\n                      </div>\n                    </div>',
   },
   {
     id: "luxknit-fabricating-interactive-display-textiles-integrated-with-sensing-by-mach",
-    title: "LuxKnit: Fabricating Interactive Display Textiles Integrated with Sensing by Machine Knitting",
+    title:
+      "LuxKnit: Fabricating Interactive Display Textiles Integrated with Sensing by Machine Knitting",
     image: "./image/luxknit.png",
     alt: "chi2025",
     year: 2025,
     featured: false,
     topics: ["human-computer-interactions"],
-    contentHtml: "<div>\n                            T. Wang; M. Chi; Y. Yu; K. Yan; M. Li; <strong>Y. Luo</strong>; R. M. Williams.\n                          </div>\n                          <div>\n                            <i>ACM CHI</i> 2025.\n                            <a href=\"https://dl.acm.org/doi/full/10.1145/3706598.3713860\">[Paper]</a>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            T. Wang; M. Chi; Y. Yu; K. Yan; M. Li; <strong>Y. Luo</strong>; R. M. Williams.\n                          </div>\n                          <div>\n                            <i>ACM CHI</i> 2025.\n                            <a href="https://dl.acm.org/doi/full/10.1145/3706598.3713860">[Paper]</a>\n                          </div>\n                        </div>',
   },
   {
     id: "telepulse-enhancing-the-teleoperation-experience-through-biomechanical-simulatio",
-    title: "TelePulse: Enhancing the Teleoperation Experience through Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality",
+    title:
+      "TelePulse: Enhancing the Teleoperation Experience through Biomechanical Simulation-Based Electrical Muscle Stimulation in Virtual Reality",
     image: "./image/telepulse.png",
     alt: "chi2025",
     year: 2025,
     featured: false,
     topics: ["human-data-capturing-and-learning"],
-    contentHtml: "<div>\n                            S. Hwang; S. Kang; J. Oh; J. Park; S. Shin; <strong>Y. Luo</strong>; J. DelPreto; S. Lee; K. Lee; W. Matusik; D. Rus; S. Kim.\n                          </div>\n                          <div>\n                            <i>ACM CHI</i> 2025.\n                            <a href=\"https://dl.acm.org/doi/full/10.1145/3706598.3713767\">[Paper]</a> </p>\n                            <p style=\"font-size:15px\"> <i class=\"fas fa-award\"></i> Best Paper Award </p>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            S. Hwang; S. Kang; J. Oh; J. Park; S. Shin; <strong>Y. Luo</strong>; J. DelPreto; S. Lee; K. Lee; W. Matusik; D. Rus; S. Kim.\n                          </div>\n                          <div>\n                            <i>ACM CHI</i> 2025.\n                            <a href="https://dl.acm.org/doi/full/10.1145/3706598.3713767">[Paper]</a> </p>\n                            <p style="font-size:15px"> <i class="fas fa-award"></i> Best Paper Award </p>\n                          </div>\n                        </div>',
   },
   {
     id: "fip-endowing-robust-motion-capture-on-daily-garment-by-fusing-flex-and-inertial-",
-    title: "FIP: Endowing Robust Motion Capture on Daily Garment by Fusing Flex and Inertial Sensors",
+    title:
+      "FIP: Endowing Robust Motion Capture on Daily Garment by Fusing Flex and Inertial Sensors",
     image: "./image/fip.png",
     alt: "chi2025",
     year: 2025,
     featured: false,
     topics: ["human-data-capturing-and-learning"],
-    contentHtml: "<div>\n                            J. Fang; R. Zheng; X. Gao; C. Zuo; S. Guo; <strong>Y. Luo</strong>.\n                          </div>\n                          <div>\n                            <i>ACM CHI</i> 2025.\n                            <a href=\"https://arxiv.org/abs/2502.15058\">[Paper]</a>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            J. Fang; R. Zheng; X. Gao; C. Zuo; S. Guo; <strong>Y. Luo</strong>.\n                          </div>\n                          <div>\n                            <i>ACM CHI</i> 2025.\n                            <a href="https://arxiv.org/abs/2502.15058">[Paper]</a>\n                          </div>\n                        </div>',
   },
   {
     id: "3d-vitac-learning-fine-grained-manipulation-with-visuo-tactile-sensing",
@@ -193,7 +280,8 @@ window.publications = [
     year: 2024,
     featured: true,
     topics: ["robotics"],
-    contentHtml: "<div>\n                            B. Huang; Y. Wang; X. Yang; <strong>Y. Luo</strong>; Y. Li.\n                          </div>\n                          <div>\n                            <i>CoRL</i> 2024.\n                <!--                <a href=\"https://www.science.org/doi/full/10.1126/science.ado5922\">[Paper]</a>-->\n                            <a href=\"https://binghao-huang.github.io/3D-ViTac/\">[Project Page]</a>\n\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            B. Huang; Y. Wang; X. Yang; <strong>Y. Luo</strong>; Y. Li.\n                          </div>\n                          <div>\n                            <i>CoRL</i> 2024.\n                <!--                <a href="https://www.science.org/doi/full/10.1126/science.ado5922">[Paper]</a>-->\n                            <a href="https://binghao-huang.github.io/3D-ViTac/">[Project Page]</a>\n\n                          </div>\n                        </div>',
   },
   {
     id: "intelligent-textiles-are-looking-bright",
@@ -203,7 +291,8 @@ window.publications = [
     year: 2024,
     featured: true,
     topics: ["review-and-perspective"],
-    contentHtml: "<div>\n                            Y. Li; <strong>Y. Luo</strong>.\n                          </div>\n                          <div>\n                            <i>Science</i> 384, 29-30, 2024.\n                            <a href=\"https://www.science.org/doi/full/10.1126/science.ado5922\">[Paper]</a>\n\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            Y. Li; <strong>Y. Luo</strong>.\n                          </div>\n                          <div>\n                            <i>Science</i> 384, 29-30, 2024.\n                            <a href="https://www.science.org/doi/full/10.1126/science.ado5922">[Paper]</a>\n\n                          </div>\n                        </div>',
   },
   {
     id: "tactile-embeddings-for-multi-task-learning",
@@ -213,7 +302,8 @@ window.publications = [
     year: 2024,
     featured: true,
     topics: ["robotics"],
-    contentHtml: "<div>\n                            <strong>Y. Luo</strong>; M. Wonsick; J. Hodgins; B. Okorn<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>ICRA </i> 2024. \n                            <a href=\"https://ieeexplore.ieee.org/document/10611419\">[Paper]</a>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            <strong>Y. Luo</strong>; M. Wonsick; J. Hodgins; B. Okorn<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>ICRA </i> 2024. \n                            <a href="https://ieeexplore.ieee.org/document/10611419">[Paper]</a>\n                          </div>\n                        </div>',
   },
   {
     id: "liquids-identification-and-manipulation-via-digitally-fabricated-impedance-senso",
@@ -223,7 +313,8 @@ window.publications = [
     year: 2024,
     featured: true,
     topics: ["robotics"],
-    contentHtml: "<div>\n                            J. Zhu*; Y. Lee*; <strong>Y. Luo</strong>*<sup>✉</sup>; T. Xu; C. Liu; D. Rus; S. Mueller; W. Matusik.\n                          </div>\n                          <div>\n                            <i>ICRA </i> 2024.\n                            <a href=\"https://ieeexplore.ieee.org/document/10611419\">[Paper]</a>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            J. Zhu*; Y. Lee*; <strong>Y. Luo</strong>*<sup>✉</sup>; T. Xu; C. Liu; D. Rus; S. Mueller; W. Matusik.\n                          </div>\n                          <div>\n                            <i>ICRA </i> 2024.\n                            <a href="https://ieeexplore.ieee.org/document/10611419">[Paper]</a>\n                          </div>\n                        </div>',
   },
   {
     id: "adaptive-tactile-interaction-transfer-via-digitally-embroidered-smart-gloves",
@@ -233,77 +324,92 @@ window.publications = [
     year: 2024,
     featured: true,
     topics: ["human-data-capturing-and-learning"],
-    contentHtml: "<div>\n                            <strong>Y. Luo</strong><sup>✉</sup>; C. Liu; Y. Lee, J. DelPreto; K. Wu; M. Foshey; D. Rus; T. Palacios; Y. Li; A. Torralba; W. Matusik<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>Nature Communications </i> 15, 868, 2024.\n                            <a href=\"http://adaptouch.csail.mit.edu/\">[Project Page]</a>\n                            <a href=\"https://www.nature.com/articles/s41467-024-45059-8\">[Paper]</a> </p>\n\n                            <p style=\"font-size:15px\">\n                              Selected as <a href=\"https://www.nature.com/ncomms/editorshighlights\" target=\"_blank\">Editors' Highlights</a>.\n                              Covered by <a href=\"https://news.mit.edu/2024/smart-glove-teaches-new-physical-skills-0220\" target=\"_blank\">[MIT news]</a>\n                              <a href=\"https://www.scientificamerican.com/article/smart-gloves-teach-piano-playing-through-touch/\" target=\"_blank\">\n                              [Scientific American]</a>.\n                            </p>\n\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            <strong>Y. Luo</strong><sup>✉</sup>; C. Liu; Y. Lee, J. DelPreto; K. Wu; M. Foshey; D. Rus; T. Palacios; Y. Li; A. Torralba; W. Matusik<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>Nature Communications </i> 15, 868, 2024.\n                            <a href="http://adaptouch.csail.mit.edu/">[Project Page]</a>\n                            <a href="https://www.nature.com/articles/s41467-024-45059-8">[Paper]</a> </p>\n\n                            <p style="font-size:15px">\n                              Selected as <a href="https://www.nature.com/ncomms/editorshighlights" target="_blank">Editors\' Highlights</a>.\n                              Covered by <a href="https://news.mit.edu/2024/smart-glove-teaches-new-physical-skills-0220" target="_blank">[MIT news]</a>\n                              <a href="https://www.scientificamerican.com/article/smart-gloves-teach-piano-playing-through-touch/" target="_blank">\n                              [Scientific American]</a>.\n                            </p>\n\n                          </div>\n                        </div>',
   },
   {
     id: "magknitic-machine-knitted-passive-and-interactive-haptic-textiles-with-integrate",
-    title: "MagKnitic: Machine-knitted Passive and Interactive Haptic Textiles with Integrated Binary Sensing",
+    title:
+      "MagKnitic: Machine-knitted Passive and Interactive Haptic Textiles with Integrated Binary Sensing",
     image: "./image/UIST2023.jpg",
     alt: "UIST2023",
     year: 2023,
     featured: true,
     topics: ["human-computer-interactions"],
-    contentHtml: "<div>\n                            <strong>Y. Luo</strong><sup>✉</sup>; J. Zhu; K. Wu; C. Honnet; S Mueller; W. Matusik.\n                          </div>\n                          <div>\n                            <i>UIST </i> 2023.\n                            <a href=\"http://magknitic.csail.mit.edu./\">[Project Page]</a>\n                            <a href=\"https://dl.acm.org/doi/10.1145/3586183.3606765\">[Paper]</a>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            <strong>Y. Luo</strong><sup>✉</sup>; J. Zhu; K. Wu; C. Honnet; S Mueller; W. Matusik.\n                          </div>\n                          <div>\n                            <i>UIST </i> 2023.\n                            <a href="http://magknitic.csail.mit.edu./">[Project Page]</a>\n                            <a href="https://dl.acm.org/doi/10.1145/3586183.3606765">[Paper]</a>\n                          </div>\n                        </div>',
   },
   {
     id: "enable-natural-tactile-interaction-for-robot-dog-based-on-large-format-distribut",
-    title: "Enable Natural Tactile Interaction for Robot Dog based on Large-format Distributed Flexible Pressure Sensors",
+    title:
+      "Enable Natural Tactile Interaction for Robot Dog based on Large-format Distributed Flexible Pressure Sensors",
     image: "./image/ICRA2023.jpg",
     alt: "ICRA2023",
     year: 2023,
     featured: false,
     topics: ["robotics"],
-    contentHtml: "<div>\n                            L. Zhan; Y. Cao; Q. Chen; H. Guo; J. Gao; <strong>Y. Luo</strong>; S. Guo; G. Zhou; J. Gong<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>ICRA </i> 2023.\n                            <a href=\"https://arxiv.org/abs/2303.07595\">[Paper]</a>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            L. Zhan; Y. Cao; Q. Chen; H. Guo; J. Gao; <strong>Y. Luo</strong>; S. Guo; G. Zhou; J. Gong<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>ICRA </i> 2023.\n                            <a href="https://arxiv.org/abs/2303.07595">[Paper]</a>\n                          </div>\n                        </div>',
   },
   {
     id: "project-mihr-enabling-gestural-interactions-on-a-keyboard-using-a-graphene-based",
-    title: "Project Mihr: Enabling Gestural Interactions on a Keyboard using a Graphene-based Fabric",
+    title:
+      "Project Mihr: Enabling Gestural Interactions on a Keyboard using a Graphene-based Fabric",
     image: "./image/CHI2023.jpg",
     alt: "CHI2023",
     year: 2023,
     featured: false,
     topics: ["human-computer-interactions"],
-    contentHtml: "<div>\n                            <strong>Y. Luo</strong><sup>✉</sup>; E. Barhudarian; T. Seyed.\n                          </div>\n                          <div>\n                            <i>CHI Late-Breaking Work </i> 2023.\n                            <a href=\"https://dl.acm.org/doi/abs/10.1145/3544549.3585873\">[Paper]</a>\n                            <a href=\"./pdf/CHI2023_poster.pdf\">[Poster]</a></p>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            <strong>Y. Luo</strong><sup>✉</sup>; E. Barhudarian; T. Seyed.\n                          </div>\n                          <div>\n                            <i>CHI Late-Breaking Work </i> 2023.\n                            <a href="https://dl.acm.org/doi/abs/10.1145/3544549.3585873">[Paper]</a>\n                            <a href="./pdf/CHI2023_poster.pdf">[Poster]</a></p>\n                          </div>\n                        </div>',
   },
   {
     id: "actionsense-a-multimodal-dataset-and-recording-framework-for-human-activities-us",
-    title: "ActionSense: A Multimodal Dataset and Recording Framework for Human Activities Using Wearable Sensors in a Kitchen Environment",
+    title:
+      "ActionSense: A Multimodal Dataset and Recording Framework for Human Activities Using Wearable Sensors in a Kitchen Environment",
     image: "./image/NeurIPS22.png",
     alt: "NeurIPS22",
     year: 2022,
     featured: true,
     topics: ["human-data-capturing-and-learning"],
-    contentHtml: "<div>\n                            J. DelPreto*<sup>✉</sup>; C. Liu*; <strong>Y. Luo</strong>; M. Foshey; Y. Li; A. Torralba; W. Matusik; D. Rus.\n                          </div>\n                          <div>\n                            <i>NeurIPS</i> 2022.\n                            <a href=\"https://action-sense.csail.mit.edu/\">[Project Page]</a>\n                            <a href=\"https://openreview.net/pdf?id=olvz0gAdGOX\">[Paper]</a></p>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            J. DelPreto*<sup>✉</sup>; C. Liu*; <strong>Y. Luo</strong>; M. Foshey; Y. Li; A. Torralba; W. Matusik; D. Rus.\n                          </div>\n                          <div>\n                            <i>NeurIPS</i> 2022.\n                            <a href="https://action-sense.csail.mit.edu/">[Project Page]</a>\n                            <a href="https://openreview.net/pdf?id=olvz0gAdGOX">[Paper]</a></p>\n                          </div>\n                        </div>',
   },
   {
     id: "seamless-walk-natural-and-comfortable-virtual-reality-locomotion-method-with-a-h",
-    title: "Seamless-walk: natural and comfortable virtual reality locomotion method with a high-resolution tactile sensor",
+    title:
+      "Seamless-walk: natural and comfortable virtual reality locomotion method with a high-resolution tactile sensor",
     image: "./image/VR2023.jpg",
     alt: "NC2022",
     year: 2023,
     featured: false,
     topics: ["ar-vr"],
-    contentHtml: "<div>\n                            Y. Choi; D. Park; S. Lee; I. Han; E. Akan; H. Jeon; <strong>Y. Luo</strong>; S. Kim; W. Matusik; D. Rus; K. Kim<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>Virtual Reality</i>, 1-15, 2023.\n                            <a href=\"https://link.springer.com/article/10.1007/s10055-023-00750-x\">[Paper]</a></p>\n                            <p style=\"font-size:15px\">\n                              Covered by <a href=\"https://www.gist.ac.kr/en/html/sub06/060208.html?mode=V&no=208907\" target=\"_blank\">[GIST News]</a>\n                              <a href=\"https://www.csail.mit.edu/news/mit-and-gist-researchers-develop-natural-and-comfortable-seamless-walk-vr-locomotion-system\" target=\"_blank\">[MIT CSAIL News]</a>\n                              <a href=\"https://techxplore.com/news/2023-04-natural-comfortable-seamless-walk-virtual-reality.html\" target=\"_blank\">[TechXplore]</a>\n                              <a href=\"https://mixed-news.com/en/seamless-walk-vr-locomotion-system/\" target=\"_blank\">[MIXED Reality News]</a>\n                            </p>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            Y. Choi; D. Park; S. Lee; I. Han; E. Akan; H. Jeon; <strong>Y. Luo</strong>; S. Kim; W. Matusik; D. Rus; K. Kim<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>Virtual Reality</i>, 1-15, 2023.\n                            <a href="https://link.springer.com/article/10.1007/s10055-023-00750-x">[Paper]</a></p>\n                            <p style="font-size:15px">\n                              Covered by <a href="https://www.gist.ac.kr/en/html/sub06/060208.html?mode=V&no=208907" target="_blank">[GIST News]</a>\n                              <a href="https://www.csail.mit.edu/news/mit-and-gist-researchers-develop-natural-and-comfortable-seamless-walk-vr-locomotion-system" target="_blank">[MIT CSAIL News]</a>\n                              <a href="https://techxplore.com/news/2023-04-natural-comfortable-seamless-walk-virtual-reality.html" target="_blank">[TechXplore]</a>\n                              <a href="https://mixed-news.com/en/seamless-walk-vr-locomotion-system/" target="_blank">[MIXED Reality News]</a>\n                            </p>\n                          </div>\n                        </div>',
   },
   {
     id: "integrated-biosensor-platform-based-on-graphene-transistor-arrays-for-real-time-",
-    title: "Integrated biosensor platform based on graphene transistor arrays for real-time high-accuracy ion sensing",
+    title:
+      "Integrated biosensor platform based on graphene transistor arrays for real-time high-accuracy ion sensing",
     image: "./image/NC2022.png",
     alt: "NC2022",
     year: 2022,
     featured: false,
     topics: ["advanced-materials-design-and-device-fabrication"],
-    contentHtml: "<div>\n                            M.Xue; C. Mackin; W. Weng; J. Zhu; <strong>Y. Luo</strong>; S. Luo; A. Lu; M. Hempel; E. McVay; J. Kong; T. Palacios<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>Nature Communications</i>, 13, 5064, 2022.\n                            <a href=\"https://www.nature.com/articles/s41467-022-32749-4\">[Paper]</a></p>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            M.Xue; C. Mackin; W. Weng; J. Zhu; <strong>Y. Luo</strong>; S. Luo; A. Lu; M. Hempel; E. McVay; J. Kong; T. Palacios<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>Nature Communications</i>, 13, 5064, 2022.\n                            <a href="https://www.nature.com/articles/s41467-022-32749-4">[Paper]</a></p>\n                          </div>\n                        </div>',
   },
   {
     id: "low-cost-gastrointestinal-manometry-via-silicone-liquid-metal-pressure-transduce",
-    title: "Low-cost Gastrointestinal Manometry via Silicone–liquid-metal Pressure Transducers Resembling a Quipu",
+    title:
+      "Low-cost Gastrointestinal Manometry via Silicone–liquid-metal Pressure Transducers Resembling a Quipu",
     image: "./image/NBE2022.jpg",
     alt: "NBE2022",
     year: 2022,
     featured: false,
     topics: ["advanced-materials-design-and-device-fabrication"],
-    contentHtml: "<div>\n                            K. Nan; S. Babaee; W. Chan; J. Kuosmanen; V. Feig; <strong>Y. Luo</strong>; S. Srinivasan; C. Patterson; A. Jebran; G. Traverso<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>Nature Biomedical Engineering</i>, 6, 1092-1104, 2022.\n                            <a href=\"https://www.nature.com/articles/s41551-022-00859-5\">[Paper]</a></p>\n                              Covered by <a href=\"https://news.mit.edu/2022/gastrointestinal-diagnostic-quipu-0322\" target=\"_blank\">[MIT news]</a>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            K. Nan; S. Babaee; W. Chan; J. Kuosmanen; V. Feig; <strong>Y. Luo</strong>; S. Srinivasan; C. Patterson; A. Jebran; G. Traverso<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>Nature Biomedical Engineering</i>, 6, 1092-1104, 2022.\n                            <a href="https://www.nature.com/articles/s41551-022-00859-5">[Paper]</a></p>\n                              Covered by <a href="https://news.mit.edu/2022/gastrointestinal-diagnostic-quipu-0322" target="_blank">[MIT news]</a>\n                          </div>\n                        </div>',
   },
   {
     id: "digital-fabrication-of-pneumatic-actuators-with-integrated-sensing-by-machine-kn",
@@ -313,7 +419,8 @@ window.publications = [
     year: 2022,
     featured: true,
     topics: ["human-computer-interactions"],
-    contentHtml: "<div>\n                            <strong>Y. Luo</strong><sup>✉</sup>; K. Wu; A. Spielberg; M. Foshey;  T. Palacios; D. Rus; W. Matusik.\n                          </div>\n                          <div>\n                            <p><i>ACM CHI</i> 2022.\n                            <a href=\"http://pneuact.csail.mit.edu/\">[Project Page]</a>\n                            <a href=\"http://pneuact.csail.mit.edu/file/CHI2022.pdf\">[Paper]</a></p>\n                            <p style=\"font-size:15px\">\n                              Covered by <a href=\"https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503\" target=\"_blank\">[MIT news]</a>\n                              <a href=\"https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/\" target=\"_blank\">[TechCrunch]</a>\n                              <a href=\"https://mashable.com/video/mit-soft-assistive-robotic-wearable\" target=\"_blank\">[Mashable]</a>.\n                            </p>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            <strong>Y. Luo</strong><sup>✉</sup>; K. Wu; A. Spielberg; M. Foshey;  T. Palacios; D. Rus; W. Matusik.\n                          </div>\n                          <div>\n                            <p><i>ACM CHI</i> 2022.\n                            <a href="http://pneuact.csail.mit.edu/">[Project Page]</a>\n                            <a href="http://pneuact.csail.mit.edu/file/CHI2022.pdf">[Paper]</a></p>\n                            <p style="font-size:15px">\n                              Covered by <a href="https://news.mit.edu/2022/soft-assistive-robotic-wearables-get-boost-rapid-design-tool-0503" target="_blank">[MIT news]</a>\n                              <a href="https://techcrunch.com/2022/05/02/mit-used-autonomous-knitting-to-create-these-soft-robotic-banana-fingers/" target="_blank">[TechCrunch]</a>\n                              <a href="https://mashable.com/video/mit-soft-assistive-robotic-wearable" target="_blank">[Mashable]</a>.\n                            </p>\n                          </div>\n                        </div>',
   },
   {
     id: "an-integrated-design-pipeline-for-tactile-sensing-robotic-manipulators",
@@ -323,7 +430,8 @@ window.publications = [
     year: 2022,
     featured: true,
     topics: ["robotics"],
-    contentHtml: "<div>\n                            L. Zlokapa<sup>✉</sup>; <strong>Y. Luo</strong>; J. Xu; M. Foshey; K. Wu; P. Agrawal; W. Matusik.\n                          </div>\n                          <div>\n                            <p><i>ICRA</i> 2022.\n                            <a href=\"http://robohands.csail.mit.edu/\">[Project Page]</a>\n                            <a href=\"https://arxiv.org/pdf/2204.07149.pdf\">[Paper]</a></p>\n                            <p style=\"font-size:15px\">\n                              Covered by <a href=\"https://news.mit.edu/2022/hand-robotic-manipulator-design-0525\" target=\"_blank\">[MIT news]</a>.\n                            </p>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            L. Zlokapa<sup>✉</sup>; <strong>Y. Luo</strong>; J. Xu; M. Foshey; K. Wu; P. Agrawal; W. Matusik.\n                          </div>\n                          <div>\n                            <p><i>ICRA</i> 2022.\n                            <a href="http://robohands.csail.mit.edu/">[Project Page]</a>\n                            <a href="https://arxiv.org/pdf/2204.07149.pdf">[Paper]</a></p>\n                            <p style="font-size:15px">\n                              Covered by <a href="https://news.mit.edu/2022/hand-robotic-manipulator-design-0525" target="_blank">[MIT news]</a>.\n                            </p>\n                          </div>\n                        </div>',
   },
   {
     id: "dynamic-modeling-of-hand-object-interactions-via-tactile-sensing",
@@ -333,7 +441,8 @@ window.publications = [
     year: 2021,
     featured: true,
     topics: ["human-data-capturing-and-learning"],
-    contentHtml: "<div>\n                            Q. Zhang*; Y. Li*<sup>✉</sup>; <strong>Y. Luo</strong>; W. Shou; M. Foshey; J. Yan; J. B. Tenenbaum; W. Matusik; A. Torralba.\n                          </div>\n                          <div>\n                            <i>IROS</i> 2021.\n                            <a href=\"http://phystouch.csail.mit.edu/\">[Project Page]</a>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            Q. Zhang*; Y. Li*<sup>✉</sup>; <strong>Y. Luo</strong>; W. Shou; M. Foshey; J. Yan; J. B. Tenenbaum; W. Matusik; A. Torralba.\n                          </div>\n                          <div>\n                            <i>IROS</i> 2021.\n                            <a href="http://phystouch.csail.mit.edu/">[Project Page]</a>\n                          </div>\n                        </div>',
   },
   {
     id: "knit-sketching-from-cut-and-sew-patterns-to-machine-knit-garments",
@@ -343,7 +452,8 @@ window.publications = [
     year: 2021,
     featured: false,
     topics: ["advanced-materials-design-and-device-fabrication"],
-    contentHtml: "<div>\n                            A. Kaspar<sup>✉</sup>; K. Wu; <strong>Y. Luo</strong>; L. Makatura; W. Matusik.\n                          </div>\n                          <div>\n                            <i>SIGGRAPH</i> 2021.\n                            <a href=\"http://knitsketching.csail.mit.edu/\">[Project Page]</a>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            A. Kaspar<sup>✉</sup>; K. Wu; <strong>Y. Luo</strong>; L. Makatura; W. Matusik.\n                          </div>\n                          <div>\n                            <i>SIGGRAPH</i> 2021.\n                            <a href="http://knitsketching.csail.mit.edu/">[Project Page]</a>\n                          </div>\n                        </div>',
   },
   {
     id: "intelligent-carpet-inferring-3d-human-pose-from-tactile-signals",
@@ -353,7 +463,8 @@ window.publications = [
     year: 2021,
     featured: true,
     topics: ["human-data-capturing-and-learning"],
-    contentHtml: "<sup>✉</sup>; Y. Li; M. Foshey; W. Shou; P. Sharma; T. Palacios; A. Torralba; W. Matusik.  <br>\n                            <i>CVPR</i> 2021.\n                            <a href=\"http://intcarpet.csail.mit.edu/\">[Project Page]</a>\n                            <a href=\"./pdf/CVPR2021.pdf\" target=\"_blank\">[Paper]</a>\n                            <a href=\"https://github.com/yiyueluo/IntelligentCarpet\" target=\"_blank\">[Code]</a></p>\n                            <p style=\"font-size:15px\">\n                              Covered by <a href=\"https://news.mit.edu/2021/intelligent-carpet-gives-insight-human-poses-0624\" target=\"_blank\">[MIT news]</a>\n                              <a href=\"https://www.fastcompany.com/90648670/this-magic-carpet-can-track-your-workout\" target=\"_blank\">[Fast Company]</a>\n                              <a href=\"https://www.zdnet.com/article/mit-makes-an-ai-smart-carpet-for-monitoring-people-without-cameras/\" target=\"_blank\">[ZDNet]</a>.\n                            </p>\n                        </div>",
+    contentHtml:
+      '<sup>✉</sup>; Y. Li; M. Foshey; W. Shou; P. Sharma; T. Palacios; A. Torralba; W. Matusik.  <br>\n                            <i>CVPR</i> 2021.\n                            <a href="http://intcarpet.csail.mit.edu/">[Project Page]</a>\n                            <a href="./pdf/CVPR2021.pdf" target="_blank">[Paper]</a>\n                            <a href="https://github.com/yiyueluo/IntelligentCarpet" target="_blank">[Code]</a></p>\n                            <p style="font-size:15px">\n                              Covered by <a href="https://news.mit.edu/2021/intelligent-carpet-gives-insight-human-poses-0624" target="_blank">[MIT news]</a>\n                              <a href="https://www.fastcompany.com/90648670/this-magic-carpet-can-track-your-workout" target="_blank">[Fast Company]</a>\n                              <a href="https://www.zdnet.com/article/mit-makes-an-ai-smart-carpet-for-monitoring-people-without-cameras/" target="_blank">[ZDNet]</a>.\n                            </p>\n                        </div>',
   },
   {
     id: "learning-human-environment-interactions-using-conformal-tactile-textiles",
@@ -363,7 +474,8 @@ window.publications = [
     year: 2021,
     featured: true,
     topics: ["human-data-capturing-and-learning"],
-    contentHtml: "<div>\n                            <p><strong>Y. Luo</strong>; Y. Li; P. Sharma; W. Shou; K. Wu; M. Foshey; B. Li; T. Palacios; A. Torralba<sup>✉</sup>; W. Matusik<sup>✉</sup>.  <br>\n                            <i>Nature Electronics</i>, 4, 193–201, 2021.\n                            <a href=\"http://senstextile.csail.mit.edu/\" target=\"_blank\">[Project page]</a>\n                            <a href=\"https://www.nature.com/articles/s41928-021-00558-0\" target=\"_blank\">[Paper (External link)]</a>\n                            <a href=\"https://www.dropbox.com/sh/g70n60jfutzd0l5/AACnOgtLUG8tHbU8TLn5MBFba?dl=0\" target=\"_blank\">[Dataset]</a>\n                            <a href=\"https://github.com/YunzhuLi/senstextile\" target=\"_blank\">[Code]</a> </p>\n                            <p style=\"font-size:15px\">\n                              Selected as <a href=\"https://www.nature.com/natelectron/volumes/4/issues/3\" target=\"_blank\">cover</a>. Commentary\n                              in <i>Nature Electronics</i> <a href=\"https://www.nature.com/articles/s41928-021-00560-6\" target=\"_blank\">(link)</a>.\n                              Covered by <a href=\"https://www.csail.mit.edu/news/smart-clothes-can-measure-your-movements\" target=\"_blank\">[MIT news]</a>\n                              <a href=\"https://www.engadget.com/mit-csail-smart-clothes-track-movements-160010512.html\" target=\"_blank\">[Engadget]</a>.\n                            </p>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            <p><strong>Y. Luo</strong>; Y. Li; P. Sharma; W. Shou; K. Wu; M. Foshey; B. Li; T. Palacios; A. Torralba<sup>✉</sup>; W. Matusik<sup>✉</sup>.  <br>\n                            <i>Nature Electronics</i>, 4, 193–201, 2021.\n                            <a href="http://senstextile.csail.mit.edu/" target="_blank">[Project page]</a>\n                            <a href="https://www.nature.com/articles/s41928-021-00558-0" target="_blank">[Paper (External link)]</a>\n                            <a href="https://www.dropbox.com/sh/g70n60jfutzd0l5/AACnOgtLUG8tHbU8TLn5MBFba?dl=0" target="_blank">[Dataset]</a>\n                            <a href="https://github.com/YunzhuLi/senstextile" target="_blank">[Code]</a> </p>\n                            <p style="font-size:15px">\n                              Selected as <a href="https://www.nature.com/natelectron/volumes/4/issues/3" target="_blank">cover</a>. Commentary\n                              in <i>Nature Electronics</i> <a href="https://www.nature.com/articles/s41928-021-00560-6" target="_blank">(link)</a>.\n                              Covered by <a href="https://www.csail.mit.edu/news/smart-clothes-can-measure-your-movements" target="_blank">[MIT news]</a>\n                              <a href="https://www.engadget.com/mit-csail-smart-clothes-track-movements-160010512.html" target="_blank">[Engadget]</a>.\n                            </p>\n                          </div>\n                        </div>',
   },
   {
     id: "knitui-fabricating-interactive-and-sensing-textiles-with-machine-knitting",
@@ -373,26 +485,31 @@ window.publications = [
     year: 2021,
     featured: true,
     topics: ["human-computer-interactions"],
-    contentHtml: "<div>\n                            <p><strong>Y. Luo</strong>*; K. Wu*<sup>✉</sup>; T. Palacios; W. Matusik.  <br>\n                            <i>ACM CHI</i> 2021.\n                            <a href=\"http://knitui.csail.mit.edu\">[Project page]</a>\n                              <a href=\"./pdf/CHI2021.pdf\" target=\"_blank\">[Paper]</a></p>\n                            <p style=\"font-size:15px\"> <i class=\"fas fa-award\"></i> Best Paper Honorable Mention Award </p>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            <p><strong>Y. Luo</strong>*; K. Wu*<sup>✉</sup>; T. Palacios; W. Matusik.  <br>\n                            <i>ACM CHI</i> 2021.\n                            <a href="http://knitui.csail.mit.edu">[Project page]</a>\n                              <a href="./pdf/CHI2021.pdf" target="_blank">[Paper]</a></p>\n                            <p style="font-size:15px"> <i class="fas fa-award"></i> Best Paper Honorable Mention Award </p>\n                          </div>\n                        </div>',
   },
   {
     id: "deterministic-assembly-of-3d-mesostructures-in-advanced-materials-via-compressiv",
-    title: "Deterministic Assembly of 3D Mesostructures in Advanced Materials via Compressive Buckling: A short Review of Recent Progress",
+    title:
+      "Deterministic Assembly of 3D Mesostructures in Advanced Materials via Compressive Buckling: A short Review of Recent Progress",
     image: "./image/EM2017.PNG",
     alt: "EM2017",
     year: 2017,
     featured: false,
     topics: ["review-and-perspective"],
-    contentHtml: "<div>\n                            Z. Yan; M. Han; Y. Yang; K. Nan; H. Luan; <strong>Y. Luo</strong>; Y. Zhang; Y. Huang; J. A. Rogers<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>Extreme Mechanics Letters</i> 11, 2017.\n                            <a href=\"https://www.sciencedirect.com/science/article/pii/S2352431616302218\" target=\"_blank\">[Paper]</a>\n                          </div>\n                        </div>",
+    contentHtml:
+      '<div>\n                            Z. Yan; M. Han; Y. Yang; K. Nan; H. Luan; <strong>Y. Luo</strong>; Y. Zhang; Y. Huang; J. A. Rogers<sup>✉</sup>.\n                          </div>\n                          <div>\n                            <i>Extreme Mechanics Letters</i> 11, 2017.\n                            <a href="https://www.sciencedirect.com/science/article/pii/S2352431616302218" target="_blank">[Paper]</a>\n                          </div>\n                        </div>',
   },
   {
     id: "three-dimensional-mesostructures-as-high-temperature-growth-templates-electronic",
-    title: "Three-dimensional Mesostructures as High-temperature Growth Templates, Electronic Cellular Scaffolds, and Self-propelled Microrobots",
+    title:
+      "Three-dimensional Mesostructures as High-temperature Growth Templates, Electronic Cellular Scaffolds, and Self-propelled Microrobots",
     image: "./image/PNAS2017.PNG",
     alt: "PNAS2017",
     year: 2017,
     featured: false,
     topics: ["advanced-materials-design-and-device-fabrication"],
-    contentHtml: "<div>\n                            Z. Yan; M. Han; Y. Shi; A. Badea; Y. Yang; A. Kulkarni; E. Hanson; M. E. Kandel; X. Wen; F. Zhang; <strong>Y.\n                              Luo</strong>; Q. Lin; et.al.\n                          </div>\n                          <div>\n                            <i>Proceedings of the National Academy of Sciences</i> 114.45, 2017.\n                            <a href=\"https://www.pnas.org/content/114/45/E9455\" target=\"_blank\">[Paper]</a>\n                          </div>\n                        </div>\n                      </div>\n\n                        <div style=\"height: 50px;\">",
+    contentHtml:
+      '<div>\n                            Z. Yan; M. Han; Y. Shi; A. Badea; Y. Yang; A. Kulkarni; E. Hanson; M. E. Kandel; X. Wen; F. Zhang; <strong>Y.\n                              Luo</strong>; Q. Lin; et.al.\n                          </div>\n                          <div>\n                            <i>Proceedings of the National Academy of Sciences</i> 114.45, 2017.\n                            <a href="https://www.pnas.org/content/114/45/E9455" target="_blank">[Paper]</a>\n                          </div>\n                        </div>\n                      </div>\n\n                        <div style="height: 50px;">',
   },
 ];

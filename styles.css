@@ -43,7 +43,9 @@ img {
 a {
   color: var(--brand);
   text-decoration: none;
-  transition: color 180ms ease, opacity 180ms ease;
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
 }
 
 a:hover,
@@ -55,6 +57,14 @@ a:focus {
 p,
 li {
   line-height: 1.7;
+}
+
+.selected-press-list {
+  padding-left: 1.5rem;
+}
+
+.selected-press-list li {
+  padding-left: 0.25rem;
 }
 
 .site-shell {

@@ -1,194 +1,448 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Digital Machine Knitting Workshop — Sept 16, 2025</title>
-  <meta name="description" content="Digital Machine Knitting Workshop at UW — September 16, 2025, 9:30am–5:00pm, Bill & Melinda Gates Center (CSE2) G059." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #0c0d10;
-      --fg: #e6e7ea;
-      --muted:#a9adb7;
-      --brand:#69d0ff;
-      --accent:#a2f59b;
-      --card:#14161b;
-      --ring:#2b303b;
-    }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#fbfbfd; --fg:#0c0d10; --muted:#5a6472; --brand:#0066ff; --accent:#1aa16b; --card:#ffffff; --ring:#e7eaf0; }
-    }
-    html,body{height:100%;}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased;}
-    .wrap{max-width:1060px;margin-inline:auto;padding:24px;}
-    header.hero{position:relative;border-radius:20px;overflow:hidden;background:radial-gradient(1200px 400px at 50% 140%, rgba(0,0,0,.04), transparent 60%),
-      linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,0) 40%),
-      #edeff5;box-shadow:0 10px 40px rgba(182, 182, 182, 0.25);}
-    /* Abstract needle-bed pattern */
-    header.hero::before{content:"";position:absolute;inset:0;background:
-      repeating-linear-gradient(
-        to right,
-        rgba(0,0,0,.06) 0 1px,
-        rgba(0,0,0,0) 1px 16px
-      ),
-      linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,0) 58%);
-      opacity:.22;mix-blend-mode:multiply;}
-    .hero-inner{position:relative;display:grid;gap:18px;padding:64px 28px 40px 28px;}
-    h1{margin:0;font-weight:800;letter-spacing:.4px;line-height:1.05;font-size:clamp(28px,5vw,54px);} 
-    .tagline{font-size:clamp(14px,2.2vw,18px);color:var(--muted);max-width:60ch}
-    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:var(--card);border:1px solid var(--ring);font-size:14px}
-    .chip svg{width:16px;height:16px;opacity:.8}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .btn{appearance:none;border:none;background:var(--brand);color:white;padding:12px 16px;border-radius:12px;font-weight:700;cursor:pointer}
-    .btn.alt{background:transparent;color:var(--fg);border:1px solid var(--ring)}
-    section{margin-top:28px}
-    .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:20px}
-    .grid{display:grid;gap:18px}
-    h2{margin:0 0 8px;font-size:24px}
-    .schedule{width:100%;border-collapse:collapse}
-    .schedule th,.schedule td{padding:12px 14px;border-bottom:1px dashed var(--ring);vertical-align:top}
-    .schedule tr:last-child td{border-bottom:none}
-    .when{white-space:nowrap;font-weight:600}
-    .label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--ring);border-radius:999px;padding:4px 8px;margin-right:6px;font-size:12px;background:rgba(255,255,255,.02)}
-    .resources a{display:inline-flex;align-items:center;gap:6px;margin-right:10px;padding:6px 10px;border-radius:10px;border:1px solid var(--ring);text-decoration:none;color:inherit}
-    .muted{color:var(--muted)}
-    footer{margin:34px 0 20px;color:var(--muted);font-size:14px}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Digital Machine Knitting Workshop — Sept 16, 2025</title>
+    <meta
+      name="description"
+      content="Digital Machine Knitting Workshop at UW — September 16, 2025, 9:30am–5:00pm, Bill & Melinda Gates Center (CSE2) G059."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0c0d10;
+        --fg: #e6e7ea;
+        --muted: #a9adb7;
+        --brand: #69d0ff;
+        --accent: #a2f59b;
+        --card: #14161b;
+        --ring: #2b303b;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #fbfbfd;
+          --fg: #0c0d10;
+          --muted: #5a6472;
+          --brand: #0066ff;
+          --accent: #1aa16b;
+          --card: #ffffff;
+          --ring: #e7eaf0;
+        }
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: 1060px;
+        margin-inline: auto;
+        padding: 24px;
+      }
+      header.hero {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        background:
+          radial-gradient(1200px 400px at 50% 140%, rgba(0, 0, 0, 0.04), transparent 60%),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0) 40%), #edeff5;
+        box-shadow: 0 10px 40px rgba(182, 182, 182, 0.25);
+      }
+      /* Abstract needle-bed pattern */
+      header.hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          repeating-linear-gradient(to right, rgba(0, 0, 0, 0.06) 0 1px, rgba(0, 0, 0, 0) 1px 16px),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0) 58%);
+        opacity: 0.22;
+        mix-blend-mode: multiply;
+      }
+      .hero-inner {
+        position: relative;
+        display: grid;
+        gap: 18px;
+        padding: 64px 28px 40px 28px;
+      }
+      h1 {
+        margin: 0;
+        font-weight: 800;
+        letter-spacing: 0.4px;
+        line-height: 1.05;
+        font-size: clamp(28px, 5vw, 54px);
+      }
+      .tagline {
+        font-size: clamp(14px, 2.2vw, 18px);
+        color: var(--muted);
+        max-width: 60ch;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 6px;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--card);
+        border: 1px solid var(--ring);
+        font-size: 14px;
+      }
+      .chip svg {
+        width: 16px;
+        height: 16px;
+        opacity: 0.8;
+      }
+      .cta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      .btn {
+        appearance: none;
+        border: none;
+        background: var(--brand);
+        color: white;
+        padding: 12px 16px;
+        border-radius: 12px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .btn.alt {
+        background: transparent;
+        color: var(--fg);
+        border: 1px solid var(--ring);
+      }
+      section {
+        margin-top: 28px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--ring);
+        border-radius: 16px;
+        padding: 20px;
+      }
+      .grid {
+        display: grid;
+        gap: 18px;
+      }
+      h2 {
+        margin: 0 0 8px;
+        font-size: 24px;
+      }
+      .schedule {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .schedule th,
+      .schedule td {
+        padding: 12px 14px;
+        border-bottom: 1px dashed var(--ring);
+        vertical-align: top;
+      }
+      .schedule tr:last-child td {
+        border-bottom: none;
+      }
+      .when {
+        white-space: nowrap;
+        font-weight: 600;
+      }
+      .label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid var(--ring);
+        border-radius: 999px;
+        padding: 4px 8px;
+        margin-right: 6px;
+        font-size: 12px;
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .resources a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-right: 10px;
+        padding: 6px 10px;
+        border-radius: 10px;
+        border: 1px solid var(--ring);
+        text-decoration: none;
+        color: inherit;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      footer {
+        margin: 34px 0 20px;
+        color: var(--muted);
+        font-size: 14px;
+      }
 
-    /* Organizers */
-    .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:10px}
-    .person{display:flex;gap:14px;padding:12px;border:1px solid var(--ring);border-radius:14px;background:rgba(255,255,255,.02);text-decoration:none;color:inherit}
-    .person:hover{transform:translateY(-1px);transition:transform .15s ease}
-    .avatar{width:72px;height:72px;border-radius:12px;object-fit:cover;background:#d9dde6;border:1px solid var(--ring)}
-    .person h3{margin:0 0 2px 0;font-size:18px}
-    .person p{margin:0;color:var(--muted);font-size:14px}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header class="hero" role="banner">
-      <div class="hero-inner">
-        <h1>Digital Machine Knitting Workshop</h1>
-        <p class="tagline">A hands-on introduction to machine knitting and e-textiles using digital design tools and Shima Seiki workflows.</p>
-        <div class="meta" aria-label="Event details">
-          <span class="chip" title="Date" aria-label="Date">
-            <!-- calendar icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M16 2v4M8 2v4M3 10h18M4 6h16a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z"/></svg>
-            Sept 16, 2025
-          </span>
-          <span class="chip" title="Time" aria-label="Time">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 7v5l4 2"/><circle cx="12" cy="12" r="9"/></svg>
-            9:30 am – 5:00 pm
-          </span>
-          <span class="chip" title="Location" aria-label="Location">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10Z"/><circle cx="12" cy="11" r="2.7"/></svg>
-            Bill & Melinda Gates Center (CSE2) G059
-          </span>
+      /* Organizers */
+      .people {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+        margin-top: 10px;
+      }
+      .person {
+        display: flex;
+        gap: 14px;
+        padding: 12px;
+        border: 1px solid var(--ring);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.02);
+        text-decoration: none;
+        color: inherit;
+      }
+      .person:hover {
+        transform: translateY(-1px);
+        transition: transform 0.15s ease;
+      }
+      .avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 12px;
+        object-fit: cover;
+        background: #d9dde6;
+        border: 1px solid var(--ring);
+      }
+      .person h3 {
+        margin: 0 0 2px 0;
+        font-size: 18px;
+      }
+      .person p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero" role="banner">
+        <div class="hero-inner">
+          <h1>Digital Machine Knitting Workshop</h1>
+          <p class="tagline">
+            A hands-on introduction to machine knitting and e-textiles using digital design tools
+            and Shima Seiki workflows.
+          </p>
+          <div class="meta" aria-label="Event details">
+            <span class="chip" title="Date" aria-label="Date">
+              <!-- calendar icon -->
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                aria-hidden="true"
+              >
+                <path
+                  d="M16 2v4M8 2v4M3 10h18M4 6h16a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z"
+                />
+              </svg>
+              Sept 16, 2025
+            </span>
+            <span class="chip" title="Time" aria-label="Time">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                aria-hidden="true"
+              >
+                <path d="M12 7v5l4 2" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+              9:30 am – 5:00 pm
+            </span>
+            <span class="chip" title="Location" aria-label="Location">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                aria-hidden="true"
+              >
+                <path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10Z" />
+                <circle cx="12" cy="11" r="2.7" />
+              </svg>
+              Bill & Melinda Gates Center (CSE2) G059
+            </span>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <section id="schedule" class="card" aria-labelledby="sched-title">
-      <h2 id="sched-title">Schedule</h2>
-      <table class="schedule" role="table" aria-describedby="sched-caption">
-        <caption id="sched-caption" class="muted" style="caption-side: bottom; text-align:left; padding-top:10px">Times are in Pacific Time (PT). Sessions and links are subject to change.</caption>
-        <tbody>
-          <tr>
-            <td class="when">9:30 – 9:45</td>
-            <td><strong>Introduction</strong></td>
-          </tr>
-          <tr>
-            <td class="when">9:45 – 10:30</td>
-            <td>
-              <strong>Foundations of machine knitting</strong>
-              <span class="resources"><a href="https://docs.google.com/presentation/d/1XD4_EWn84m1Rm7m00DGw68VozikcKPAK/edit?usp=sharing&ouid=106626216731210694908&rtpof=true&sd=true" aria-label="Slides for Foundations">📑 slide</a></span>
-            </td>
-          </tr>
-          <tr>
-            <td class="when">10:30 – 12:00</td>
-            <td>
-              <strong>Design</strong>
-              <span class="resources">
-                <a href="https://www.notion.so/Machine-Knitting-with-Knitout-101-26ee4d76b5e380db8549de51cb2ef0be" aria-label="Slides for tutorial">📑 slide</a>
-                <a href="https://drive.google.com/file/d/1ztZFclhqMiVSoCCiBOuA4_Ok9eHMXexE/view?usp=sharing" aria-label="Code base" >💻 knitout-to-dat.js</a>
-                <!-- <a href="#" aria-label="Examples">🧶 examples</a> -->
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td class="when" aria-label="Lunch break">12:00 – 1:00</td>
-            <td><strong>Lunch Break</strong></td>
-          </tr>
-          <tr>
-            <td class="when">1:00 – 2:00</td>
-            <td>
-              <strong>Introduction to machine-knitted e-textiles</strong>
-              <span class="resources">
-                <a href="https://docs.google.com/presentation/d/1Lw9goAcL729x5BjAOWdJWx7NXDoaC-BI/edit?usp=sharing&ouid=106626216731210694908&rtpof=true&sd=true" aria-label="Slides for e-textiles intro">📑 slide</a>
-                <a href="https://drive.google.com/drive/folders/1OhrOFh1EaI0i3ysTZWAbgwcJrr_mrNPU?usp=sharing" aria-label="Examples for e-textiles intro">🧶 examples</a>
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td class="when">2:00 – 4:30</td>
-            <td><strong>Hands-on session</strong></td>
-          </tr>
-          <tr>
-            <td class="when">4:30 – 5:00</td>
-            <td><strong>Wrap-up</strong></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+      <section id="schedule" class="card" aria-labelledby="sched-title">
+        <h2 id="sched-title">Schedule</h2>
+        <table class="schedule" role="table" aria-describedby="sched-caption">
+          <caption
+            id="sched-caption"
+            class="muted"
+            style="caption-side: bottom; text-align: left; padding-top: 10px"
+          >
+            Times are in Pacific Time (PT). Sessions and links are subject to change.
+          </caption>
+          <tbody>
+            <tr>
+              <td class="when">9:30 – 9:45</td>
+              <td><strong>Introduction</strong></td>
+            </tr>
+            <tr>
+              <td class="when">9:45 – 10:30</td>
+              <td>
+                <strong>Foundations of machine knitting</strong>
+                <span class="resources"
+                  ><a
+                    href="https://docs.google.com/presentation/d/1XD4_EWn84m1Rm7m00DGw68VozikcKPAK/edit?usp=sharing&ouid=106626216731210694908&rtpof=true&sd=true"
+                    aria-label="Slides for Foundations"
+                    >📑 slide</a
+                  ></span
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="when">10:30 – 12:00</td>
+              <td>
+                <strong>Design</strong>
+                <span class="resources">
+                  <a
+                    href="https://www.notion.so/Machine-Knitting-with-Knitout-101-26ee4d76b5e380db8549de51cb2ef0be"
+                    aria-label="Slides for tutorial"
+                    >📑 slide</a
+                  >
+                  <a
+                    href="https://drive.google.com/file/d/1ztZFclhqMiVSoCCiBOuA4_Ok9eHMXexE/view?usp=sharing"
+                    aria-label="Code base"
+                    >💻 knitout-to-dat.js</a
+                  >
+                  <!-- <a href="#" aria-label="Examples">🧶 examples</a> -->
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="when" aria-label="Lunch break">12:00 – 1:00</td>
+              <td><strong>Lunch Break</strong></td>
+            </tr>
+            <tr>
+              <td class="when">1:00 – 2:00</td>
+              <td>
+                <strong>Introduction to machine-knitted e-textiles</strong>
+                <span class="resources">
+                  <a
+                    href="https://docs.google.com/presentation/d/1Lw9goAcL729x5BjAOWdJWx7NXDoaC-BI/edit?usp=sharing&ouid=106626216731210694908&rtpof=true&sd=true"
+                    aria-label="Slides for e-textiles intro"
+                    >📑 slide</a
+                  >
+                  <a
+                    href="https://drive.google.com/drive/folders/1OhrOFh1EaI0i3ysTZWAbgwcJrr_mrNPU?usp=sharing"
+                    aria-label="Examples for e-textiles intro"
+                    >🧶 examples</a
+                  >
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="when">2:00 – 4:30</td>
+              <td><strong>Hands-on session</strong></td>
+            </tr>
+            <tr>
+              <td class="when">4:30 – 5:00</td>
+              <td><strong>Wrap-up</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-    <!-- Organizers -->
-    <section id="organizers" class="card" aria-labelledby="org-title">
-      <h2 id="org-title">Organizers</h2>
-      <div class="people">
-        <a class="person" href="https://yyueluo.com/" target="_blank" rel="noopener">
-          <img class="avatar" src="image/headshot6.jpg" alt="Portrait">
-          <div>
-            <h3>Yiyue Luo</h3>
-            <p>Assistant Professor — UW ECE</p>
-          </div>
-        </a>
+      <!-- Organizers -->
+      <section id="organizers" class="card" aria-labelledby="org-title">
+        <h2 id="org-title">Organizers</h2>
+        <div class="people">
+          <a class="person" href="https://yyueluo.com/" target="_blank" rel="noopener">
+            <img class="avatar" src="image/headshot6.jpg" alt="Portrait" />
+            <div>
+              <h3>Yiyue Luo</h3>
+              <p>Assistant Professor — UW ECE</p>
+            </div>
+          </a>
 
-        <a class="person" href="https://www.linkedin.com/in/sen-zhang-99b6a617b/" target="_blank" rel="noopener">
-          <img class="avatar" src="image/SenZhang.jpg" alt="Portrait">
-          <div>
-            <h3>Sen Zhang</h3>
-            <p>Postdocteral Researcher — UW ECE</p>
-          </div>
-        </a>
+          <a
+            class="person"
+            href="https://www.linkedin.com/in/sen-zhang-99b6a617b/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img class="avatar" src="image/SenZhang.jpg" alt="Portrait" />
+            <div>
+              <h3>Sen Zhang</h3>
+              <p>Postdocteral Researcher — UW ECE</p>
+            </div>
+          </a>
 
-        <a class="person" href="https://catherineyu.com/" target="_blank" rel="noopener">
-          <img class="avatar" src="image/catherine-profile.jpeg" alt="Portrait">
-          <div>
-            <h3>Catherine Yu</h3>
-            <p>PhD Candidate — Cornell University</p>
-          </div>
-        </a>
-      </div>
-    </section>
-  <!-- Resources -->
-  <section id="resources" class="card" aria-labelledby="res-title">
-    <h2 id="res-title">Resources</h2>
-    
-    <div class="resources" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:10px">
-      <!-- Slides & Notes -->
-      <a href="https://akaspar.pages.cba.mit.edu/machine-knitting/" aria-label="Foundations of machine knitting">📑 Foundations of machine knittings</a>
-      <a href="https://core.ac.uk/download/pdf/15614587.pdf" aria-label="E-textiles introduction slides">📑 Design of 3D knits</a>
-      <a href="https://textiles-lab.github.io/posts/" aria-label="E-textiles introduction slides">📑 Knitting tutorials from CMU</a>
+          <a class="person" href="https://catherineyu.com/" target="_blank" rel="noopener">
+            <img class="avatar" src="image/catherine-profile.jpeg" alt="Portrait" />
+            <div>
+              <h3>Catherine Yu</h3>
+              <p>PhD Candidate — Cornell University</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <!-- Resources -->
+      <section id="resources" class="card" aria-labelledby="res-title">
+        <h2 id="res-title">Resources</h2>
+
+        <div class="resources" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px">
+          <!-- Slides & Notes -->
+          <a
+            href="https://akaspar.pages.cba.mit.edu/machine-knitting/"
+            aria-label="Foundations of machine knitting"
+            >📑 Foundations of machine knittings</a
+          >
+          <a
+            href="https://core.ac.uk/download/pdf/15614587.pdf"
+            aria-label="E-textiles introduction slides"
+            >📑 Design of 3D knits</a
+          >
+          <a
+            href="https://textiles-lab.github.io/posts/"
+            aria-label="E-textiles introduction slides"
+            >📑 Knitting tutorials from CMU</a
+          >
+        </div>
+      </section>
+
+      <footer>
+        Questions or want to share your swatches? Email
+        <a href="mailto:yyueluo@uw.edu">yyueluo@uw.edu</a>.
+      </footer>
     </div>
-  </section>
-
-  <footer>
-    Questions or want to share your swatches? Email <a href="mailto:yyueluo@uw.edu">yyueluo@uw.edu</a>.
-  </footer>
-
-  </div>
-</body>
+  </body>
 </html>

@@ -56,7 +56,8 @@ function setupNavToggles() {
 
   toggles.forEach(function (button) {
     button.addEventListener("click", function () {
-      var targetSelector = button.getAttribute("data-bs-target") || button.getAttribute("data-target");
+      var targetSelector =
+        button.getAttribute("data-bs-target") || button.getAttribute("data-target");
       var target = null;
 
       if (targetSelector) {

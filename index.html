@@ -62,6 +62,19 @@
       #pubs .publication-topic-heading {
         margin-top: 30px;
       }
+
+      #pub [data-pub-view] {
+        display: inline-block;
+        padding: 3px 9px;
+        border-radius: 999px;
+      }
+
+      #pub [data-pub-view].pub-toggle-active {
+        background: #007bff;
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+      }
     </style>
     <!-- nav-bar -->
 
@@ -1929,10 +1942,10 @@
 
     <div style="height: 50px"></div>
 
-    <script src="js/publications-data.js?v=20260720"></script>
-    <script src="js/publications-page.js?v=20260720"></script>
+    <script src="js/publications-data.js?v=20260921"></script>
+    <script src="js/publications-page.js?v=20260921"></script>
     <script>
-      initPublicationPage("date");
+      initPublicationPage("selected");
     </script>
     <!--  <script>var scroll = new SmoothScroll('a[href*="#"]', {speed: 1000});</script>-->
     <link

@@ -2,18 +2,16 @@
 // Then optionally include its `id` in `selectedOrder` and any topic section `items`.
 window.publicationConfig = {
   selectedOrder: [
+    "sensorimotor-stickies-a-reconfigurable-on-body-platform-for-closed-loop-sensorimotor-training",
     "knittable-electronic-textiles-for-intelligent-soft-wearables",
     "magball-magnetic-rollerball-for-multi-scale-contact-interactions-on-diverse-surfaces",
-    "3d-printing-of-passively-actuated-self-folding-robots-with-integrated-functional-modules",
     "a-closed-loop-cpr-training-glove-with-integrated-tactile-sensing-and-haptic-feedback",
     "wiresens-toolkit-an-open-source-platform-towards-accesible-wireless-tactile-sens",
     "magtex-machine-knitted-magnetoactive-textiles-for-bidirectional-human-machine-in",
-    "biogem-a-fully-biodegradable-gelatin-based-mckibben-actuator-with-embedded-sensi",
     "bandei-a-flexible-electrical-impedance-sensing-bandage-for-deep-muscles-and-tend",
     "fibercircuits-an-open-platform-to-embed-integrated-circuits-inside-fibers",
     "locotouch-learning-dexterous-quadrupedal-transport-with-tactile-sensing",
     "3d-vitac-learning-fine-grained-manipulation-with-visuo-tactile-sensing",
-    "intelligent-textiles-are-looking-bright",
     "adaptive-tactile-interaction-transfer-via-digitally-embroidered-smart-gloves",
     "tactile-embeddings-for-multi-task-learning",
     "liquids-identification-and-manipulation-via-digitally-fabricated-impedance-senso",
@@ -31,6 +29,8 @@ window.publicationConfig = {
       id: "human-data-capturing-and-learning",
       title: "Human Data Capturing and Learning",
       items: [
+        "sensorimotor-stickies-a-reconfigurable-on-body-platform-for-closed-loop-sensorimotor-training",
+        "pose-aware-modeling-to-mitigate-pose-related-artifacts-in-tactile-gloves",
         "a-closed-loop-cpr-training-glove-with-integrated-tactile-sensing-and-haptic-feedback",
         "magtex-machine-knitted-magnetoactive-textiles-for-bidirectional-human-machine-in",
         "bandei-a-flexible-electrical-impedance-sensing-bandage-for-deep-muscles-and-tend",
@@ -48,6 +48,7 @@ window.publicationConfig = {
       id: "human-computer-interactions",
       title: "Human-Computer Interactions",
       items: [
+        "sensorimotor-stickies-a-reconfigurable-on-body-platform-for-closed-loop-sensorimotor-training",
         "magball-magnetic-rollerball-for-multi-scale-contact-interactions-on-diverse-surfaces",
         "wiresens-toolkit-an-open-source-platform-towards-accesible-wireless-tactile-sens",
         "luxknit-fabricating-interactive-display-textiles-integrated-with-sensing-by-mach",
@@ -101,6 +102,29 @@ window.publicationConfig = {
 };
 
 window.publications = [
+  {
+    id: "sensorimotor-stickies-a-reconfigurable-on-body-platform-for-closed-loop-sensorimotor-training",
+    title:
+      "Sensorimotor Stickies: A Reconfigurable On-Body Platform for Closed-Loop Sensorimotor Training",
+    image: "./image/sensorimotor-stickies.png",
+    alt: "Sensorimotor Stickies wearable sensing and feedback toolkit",
+    year: 2026,
+    featured: true,
+    topics: ["human-data-capturing-and-learning", "human-computer-interactions"],
+    contentHtml:
+      '<div>T. C. Yu; J. Zheng; C.-J. Lee; Q. Yang; T. Cheng; Q. Xue; C. Zhang; <strong>Y. Luo</strong>.</div><div><i>UIST</i>, 2026. <a href="https://stickies.catherineyu.com/docs/publications">[Project Page]</a> <a href="https://arxiv.org/abs/2608.13412">[Paper]</a> <a href="https://youtu.be/52ZLJSC1YV0">[Video]</a></div>',
+  },
+  {
+    id: "pose-aware-modeling-to-mitigate-pose-related-artifacts-in-tactile-gloves",
+    title: "Pose-Aware Modeling to Mitigate Pose-Related Artifacts in Tactile Gloves",
+    image: "./image/PRA-thumbnail.png",
+    alt: "Pose-aware modeling for tactile gloves",
+    year: 2026,
+    featured: false,
+    topics: ["human-data-capturing-and-learning"],
+    contentHtml:
+      '<div>T. C. Yu; Z. Kou; M. Huang; T. Niehues; <strong>Y. Luo</strong>; G. Li; D. Zhang.</div><div><i>IROS</i>, 2026. <a href="https://arxiv.org/abs/2607.22964">[Paper]</a></div>',
+  },
   {
     id: "knittable-electronic-textiles-for-intelligent-soft-wearables",
     title: "Knittable Electronic Textiles for Intelligent Soft Wearables",
@@ -175,7 +199,7 @@ window.publications = [
     image: "./image/biogem-uist25.png",
     alt: "UIST2025",
     year: 2025,
-    featured: true,
+    featured: false,
     topics: ["advanced-materials-design-and-device-fabrication"],
     contentHtml:
       '<div>\n                        G. Ge; H. Lu; Y. Gao; Q. Yang; J. Hester; T. Cheng; <strong>Y. Luo</strong>.\n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href="https://sustainableactuator.ece.uw.edu/">[Project Page]</a>\n                        <a href="https://drive.google.com/file/d/1ikuu9xlojgjrWbYaGchQJRIonBtElRno/view">[Paper]</a>\n                      </div>\n                    </div>',

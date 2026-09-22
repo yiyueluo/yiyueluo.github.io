@@ -101,7 +101,9 @@
     var toggles = document.querySelectorAll("[data-pub-view]");
 
     toggles.forEach(function (toggle) {
-      toggle.classList.toggle("pub-toggle-active", toggle.getAttribute("data-pub-view") === view);
+      var isActive = toggle.getAttribute("data-pub-view") === view;
+      toggle.classList.toggle("pub-toggle-active", isActive);
+      toggle.setAttribute("aria-current", isActive ? "true" : "false");
     });
   }
 

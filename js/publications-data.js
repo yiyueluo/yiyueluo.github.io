@@ -32,6 +32,7 @@ window.publicationConfig = {
         "sensorimotor-stickies-a-reconfigurable-on-body-platform-for-closed-loop-sensorimotor-training",
         "pose-aware-modeling-to-mitigate-pose-related-artifacts-in-tactile-gloves",
         "a-closed-loop-cpr-training-glove-with-integrated-tactile-sensing-and-haptic-feedback",
+        "opentouch-bringing-full-hand-touch-to-real-world-interaction",
         "magtex-machine-knitted-magnetoactive-textiles-for-bidirectional-human-machine-in",
         "bandei-a-flexible-electrical-impedance-sensing-bandage-for-deep-muscles-and-tend",
         "ei-lite-electrical-impedance-sensing-for-micro-gesture-recognition-and-pinch-for",
@@ -62,6 +63,7 @@ window.publicationConfig = {
       id: "robotics",
       title: "Robotics",
       items: [
+        "zero-shot-deformation-reconstruction-for-soft-robots-using-a-flexible-sensor-array-and-cage-based-3d-gaussian-modeling",
         "locotouch-learning-dexterous-quadrupedal-transport-with-tactile-sensing",
         "soda-soft-origami-dynamic-utensil-for-assisted-feeding",
         "3d-vitac-learning-fine-grained-manipulation-with-visuo-tactile-sensing",
@@ -124,6 +126,18 @@ window.publications = [
     topics: ["human-data-capturing-and-learning"],
     contentHtml:
       '<div>T. C. Yu; Z. Kou; M. Huang; T. Niehues; <strong>Y. Luo</strong>; G. Li; D. Zhang.</div><div><i>IROS</i>, 2026. <a href="https://arxiv.org/abs/2607.22964">[Paper]</a></div>',
+  },
+  {
+    id: "zero-shot-deformation-reconstruction-for-soft-robots-using-a-flexible-sensor-array-and-cage-based-3d-gaussian-modeling",
+    title:
+      "Zero Shot Deformation Reconstruction for Soft Robots Using a Flexible Sensor Array and Cage Based 3D Gaussian Modeling",
+    image: "./image/zero-shot-deformation-reconstruction.png",
+    alt: "Zero-shot deformation reconstruction for soft robots",
+    year: 2026,
+    featured: false,
+    topics: ["robotics"],
+    contentHtml:
+      '<div>L. Shou; Z. Chen; W. Xu; <strong>Y. Luo</strong>; T. Cheng.</div><div><i>IROS</i>, 2026. <a href="https://arxiv.org/abs/2603.19543">[Paper]</a></div>',
   },
   {
     id: "knittable-electronic-textiles-for-intelligent-soft-wearables",
@@ -192,6 +206,17 @@ window.publications = [
     topics: ["human-data-capturing-and-learning"],
     contentHtml:
       '<div>\n                        S. Zhang; Y. Miao; J. Taylor; <strong>Y. Luo</strong>.\n                      </div>\n                      <div>\n                        <i>UIST </i> 2025.\n                        <a href="https://jsenz7.github.io/MagTex/">[Project Page]</a>\n                        <a href="https://jsenz7.github.io/MagTex/static/pdfs/magtex.pdf">[Paper]</a> </p>\n                        <p style="font-size:15px"> <i class="fas fa-award"></i> Best Paper Honorable Mention Award </p>\n                      </div>\n                    </div>',
+  },
+  {
+    id: "opentouch-bringing-full-hand-touch-to-real-world-interaction",
+    title: "OPENTOUCH: Bringing Full-Hand Touch to Real-World Interaction",
+    image: "./image/opentouch.png",
+    alt: "OPENTOUCH full-hand tactile interaction dataset",
+    year: 2025,
+    featured: false,
+    topics: ["human-data-capturing-and-learning"],
+    contentHtml:
+      '<div>Y. R. Song; J. Li; R. Fu; D. Murphy; K. Zhou; R. Shiv; Y. Li; H. Xiong; C. E. Owens; Y. Du; <strong>Y. Luo</strong>; X. Cheng; A. Torralba; W. Matusik; P. P. Liang.</div><div><i>arXiv</i>, 2025. <a href="https://opentouch-tactile.github.io/">[Project Page]</a> <a href="https://arxiv.org/abs/2512.16842">[Paper]</a></div>',
   },
   {
     id: "biogem-a-fully-biodegradable-gelatin-based-mckibben-actuator-with-embedded-sensi",
